@@ -3,6 +3,7 @@ using DeskEntity.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DeskData.Repository
@@ -55,5 +56,22 @@ namespace DeskData.Repository
             return _db.bookingSeats;
         }
         #endregion GetAllBookingSeats
+
+        public IEnumerable<BookingSeat> GetBookingSeats(int employeeId, DateTime fromDate, DateTime toDate, string searchTitle)
+        {
+            var bookingSeat = from bs in _db.bookingSeats
+                              where bs.EmployeeID == employeeId &&
+                                    bs.FromDate >= fromDate &&
+                                    bs.ToDate <= toDate
+                              orderby bs.FromDate descending
+                              select bs;
+
+            if (!String.IsNullOrEmpty(searchTitle))
+            {
+                bookingSeat = (IOrderedQueryable<BookingSeat>)bookingSeat.Where(bs => bs.bookingrequesttype.Contains(searchTitle));
+            }
+
+            return bookingSeat.ToList();
+        }
     }
 }

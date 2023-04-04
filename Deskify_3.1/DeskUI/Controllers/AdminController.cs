@@ -1,18 +1,20 @@
-﻿using DeskEntity.Model;
+﻿using DeskData.Data;
+using DeskEntity.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
+using DeskData.Repository;
 
 namespace DeskUI.Controllers
 {
     public class AdminController : Controller
-    {
-
-
+    {       
 
         #region AddSeat
         private IConfiguration _configuration;
@@ -21,6 +23,11 @@ namespace DeskUI.Controllers
         {
             _configuration = configuration;
         }
+
+        DeskDbContext db = new DeskDbContext();
+
+
+
         [HttpGet]
         public async Task<IActionResult> AllSeats()
         {

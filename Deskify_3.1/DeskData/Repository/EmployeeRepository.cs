@@ -45,14 +45,13 @@ namespace DeskData.Repository
             }
             return null;
         }
-
       
 
         public void UpdateEmployee(Employee employee)
         {
             _db.Entry(employee).State = EntityState.Modified;
             _db.SaveChanges();
-        }
+        }        
     }
 }
 

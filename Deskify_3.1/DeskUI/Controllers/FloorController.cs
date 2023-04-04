@@ -79,7 +79,7 @@ namespace DeskUI.Controllers
             Floor floor = null;
             using (HttpClient client = new HttpClient())
             {
-                string endPoint = _configuration["WebApiBaseUrl"] + "Floor/GetFloorById?Id=" + floorId;
+                string endPoint = _configuration["WebApiBaseUrl"] + "Floor/GetFloorById?floorId=" + floorId;
                 using (var response = await client.GetAsync(endPoint))
                 {
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
