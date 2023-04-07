@@ -401,3 +401,882 @@ FROM [LoginTables] AS [l]
 2023-04-07 18:09:39.627 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 1622.0129ms
 2023-04-07 18:09:39.627 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
 2023-04-07 18:09:39.630 +05:30 [INF] Request finished in 1654.5425ms 200 application/json; charset=utf-8
+2023-04-07 18:17:34.507 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 18:17:34.541 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/weatherforecast  
+2023-04-07 18:17:34.566 +05:30 [INF] Hosting environment: Development
+2023-04-07 18:17:34.566 +05:30 [INF] Content root path: C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskAPI
+2023-04-07 18:17:34.671 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 18:17:34.708 +05:30 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskAPI.WeatherForecast] Get() on controller DeskAPI.Controllers.WeatherForecastController (DeskAPI).
+2023-04-07 18:17:34.716 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskAPI.WeatherForecast[]'.
+2023-04-07 18:17:34.761 +05:30 [INF] Executed action DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI) in 44.9562ms
+2023-04-07 18:17:34.763 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 18:17:34.769 +05:30 [INF] Request finished in 238.4141ms 200 application/json; charset=utf-8
+2023-04-07 18:17:34.891 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/favicon.ico  
+2023-04-07 18:17:34.902 +05:30 [INF] Request finished in 11.1463ms 404 
+2023-04-07 18:17:38.477 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/index.html  
+2023-04-07 18:17:38.690 +05:30 [INF] Request finished in 212.6768ms 200 text/html;charset=utf-8
+2023-04-07 18:17:38.721 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_framework/aspnetcore-browser-refresh.js  
+2023-04-07 18:17:38.727 +05:30 [INF] Request finished in 6.0398ms 200 application/javascript; charset=utf-8
+2023-04-07 18:17:38.759 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_vs/browserLink  
+2023-04-07 18:17:38.859 +05:30 [INF] Request finished in 100.452ms 200 text/javascript; charset=UTF-8
+2023-04-07 18:17:38.977 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/v1/swagger.json  
+2023-04-07 18:17:39.162 +05:30 [INF] Request finished in 184.9221ms 200 application/json;charset=utf-8
+2023-04-07 18:19:37.787 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 18:19:37.818 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/weatherforecast  
+2023-04-07 18:19:37.838 +05:30 [INF] Hosting environment: Development
+2023-04-07 18:19:37.838 +05:30 [INF] Content root path: C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskAPI
+2023-04-07 18:19:37.909 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 18:19:37.937 +05:30 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskAPI.WeatherForecast] Get() on controller DeskAPI.Controllers.WeatherForecastController (DeskAPI).
+2023-04-07 18:19:37.942 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskAPI.WeatherForecast[]'.
+2023-04-07 18:19:37.976 +05:30 [INF] Executed action DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI) in 32.3508ms
+2023-04-07 18:19:37.978 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 18:19:37.985 +05:30 [INF] Request finished in 174.0617ms 200 application/json; charset=utf-8
+2023-04-07 18:19:44.963 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/index.html  
+2023-04-07 18:19:45.085 +05:30 [INF] Request finished in 122.2294ms 200 text/html;charset=utf-8
+2023-04-07 18:19:45.103 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_framework/aspnetcore-browser-refresh.js  
+2023-04-07 18:19:45.106 +05:30 [INF] Request finished in 2.8917ms 200 application/javascript; charset=utf-8
+2023-04-07 18:19:45.157 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_vs/browserLink  
+2023-04-07 18:19:45.187 +05:30 [INF] Request finished in 30.3907ms 200 text/javascript; charset=UTF-8
+2023-04-07 18:19:45.297 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/v1/swagger.json  
+2023-04-07 18:19:45.459 +05:30 [INF] Request finished in 161.9259ms 200 application/json;charset=utf-8
+2023-04-07 18:20:09.209 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 18:20:09.212 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:20:09.231 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 18:20:10.640 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:20:11.885 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 18:20:11.907 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 18:20:11.909 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 2677.5031ms
+2023-04-07 18:20:11.909 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:20:11.916 +05:30 [INF] Request finished in 2709.3128ms 200 application/json; charset=utf-8
+2023-04-07 18:40:39.434 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 18:40:39.469 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/weatherforecast  
+2023-04-07 18:40:39.486 +05:30 [INF] Hosting environment: Development
+2023-04-07 18:40:39.486 +05:30 [INF] Content root path: C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskAPI
+2023-04-07 18:40:39.568 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 18:40:39.596 +05:30 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskAPI.WeatherForecast] Get() on controller DeskAPI.Controllers.WeatherForecastController (DeskAPI).
+2023-04-07 18:40:39.601 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskAPI.WeatherForecast[]'.
+2023-04-07 18:40:39.633 +05:30 [INF] Executed action DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI) in 30.7382ms
+2023-04-07 18:40:39.636 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 18:40:39.643 +05:30 [INF] Request finished in 181.1158ms 200 application/json; charset=utf-8
+2023-04-07 18:41:09.186 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 18:41:09.192 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:41:09.209 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 18:41:10.273 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:41:11.000 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 18:41:11.018 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 18:41:11.020 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 1810.2081ms
+2023-04-07 18:41:11.020 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:41:11.026 +05:30 [INF] Request finished in 1842.427ms 200 application/json; charset=utf-8
+2023-04-07 18:41:21.492 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetAllBookingSeats  
+2023-04-07 18:41:21.499 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI)'
+2023-04-07 18:41:21.507 +05:30 [INF] Route matched with {action = "GetAllBookingSeats", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetAllBookingSeats() on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:41:21.566 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:41:21.762 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [s].[SeatId], [s].[FloorId], [s].[SeatNumber], [s].[Status]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+INNER JOIN [seats] AS [s] ON [b].[SeatId] = [s].[SeatId]
+2023-04-07 18:41:21.763 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:41:21.765 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI) in 256.878ms
+2023-04-07 18:41:21.765 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI)'
+2023-04-07 18:41:21.765 +05:30 [INF] Request finished in 273.94ms 200 application/json; charset=utf-8
+2023-04-07 18:42:34.954 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/AddLogin application/json; charset=utf-8 64
+2023-04-07 18:42:34.959 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.AddLogin (DeskAPI)'
+2023-04-07 18:42:34.963 +05:30 [INF] Route matched with {action = "AddLogin", controller = "LoginTable"}. Executing controller action with signature Int32 AddLogin(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 18:42:34.983 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:42:35.214 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (Size = 30) (DbType = AnsiString), @p1='?' (Size = 20) (DbType = AnsiString), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [LoginTables] ([Email], [Password], [Type])
+VALUES (@p0, @p1, @p2);
+SELECT [ID]
+FROM [LoginTables]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();
+2023-04-07 18:42:35.261 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 18:42:35.264 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2023-04-07 18:42:35.265 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.AddLogin (DeskAPI) in 301.7677ms
+2023-04-07 18:42:35.265 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.AddLogin (DeskAPI)'
+2023-04-07 18:42:35.265 +05:30 [INF] Request finished in 312.8181ms 200 application/json; charset=utf-8
+2023-04-07 18:42:35.305 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/Employee/AddEmployee application/json; charset=utf-8 181
+2023-04-07 18:42:35.306 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.AddEmployee (DeskAPI)'
+2023-04-07 18:42:35.307 +05:30 [INF] Route matched with {action = "AddEmployee", controller = "Employee"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddEmployee(DeskEntity.Model.Employee) on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 18:42:35.318 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:42:35.358 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 1) (DbType = AnsiStringFixedLength), @p4='?' (Size = 8000) (DbType = Binary), @p5='?' (Size = 12), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [employees] ([EmployeeID], [EmployeeName], [EmployeeNumber], [Gender], [Image], [PhoneNumber], [Role], [SecurityQuestion])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-04-07 18:42:35.359 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-04-07 18:42:35.361 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.AddEmployee (DeskAPI) in 53.5911ms
+2023-04-07 18:42:35.361 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.AddEmployee (DeskAPI)'
+2023-04-07 18:42:35.363 +05:30 [INF] Request finished in 57.6555ms 200 text/plain; charset=utf-8
+2023-04-07 18:42:38.377 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 18:42:38.379 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:42:38.380 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 18:42:38.388 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:42:38.390 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 18:42:38.393 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 18:42:38.393 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 12.5541ms
+2023-04-07 18:42:38.394 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:42:38.394 +05:30 [INF] Request finished in 16.7179ms 200 application/json; charset=utf-8
+2023-04-07 18:42:38.427 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Employee/GetEmployeeById?employeeId=1  
+2023-04-07 18:42:38.429 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.GetEmployeeById (DeskAPI)'
+2023-04-07 18:42:38.431 +05:30 [INF] Route matched with {action = "GetEmployeeById", controller = "Employee"}. Executing controller action with signature DeskEntity.Model.Employee GetEmployeeById(Int32) on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 18:42:38.437 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:42:38.458 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [employees] AS [e]
+INNER JOIN [LoginTables] AS [l] ON [e].[EmployeeID] = [l].[ID]
+2023-04-07 18:42:38.465 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskEntity.Model.Employee'.
+2023-04-07 18:42:38.479 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.GetEmployeeById (DeskAPI) in 47.758ms
+2023-04-07 18:42:38.479 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.GetEmployeeById (DeskAPI)'
+2023-04-07 18:42:38.479 +05:30 [INF] Request finished in 52.2579ms 200 application/json; charset=utf-8
+2023-04-07 18:42:50.361 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 18:42:50.362 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:42:50.363 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 18:42:50.366 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:42:50.369 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 18:42:50.372 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 18:42:50.373 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 9.4917ms
+2023-04-07 18:42:50.373 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:42:50.373 +05:30 [INF] Request finished in 13.235ms 200 application/json; charset=utf-8
+2023-04-07 18:42:55.137 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Floor/GetFloor  
+2023-04-07 18:42:55.139 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.FloorController.GetFloor (DeskAPI)'
+2023-04-07 18:42:55.146 +05:30 [INF] Route matched with {action = "GetFloor", controller = "Floor"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Floor] GetFloor() on controller DeskAPI.Controllers.FloorController (DeskAPI).
+2023-04-07 18:42:55.149 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:42:55.163 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FloorId], [f].[FloorName]
+FROM [floors] AS [f]
+2023-04-07 18:42:55.164 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Floor, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:42:55.166 +05:30 [INF] Executed action DeskAPI.Controllers.FloorController.GetFloor (DeskAPI) in 19.271ms
+2023-04-07 18:42:55.166 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.FloorController.GetFloor (DeskAPI)'
+2023-04-07 18:42:55.167 +05:30 [INF] Request finished in 30.0338ms 200 application/json; charset=utf-8
+2023-04-07 18:43:09.643 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/Floor/AddFloor application/json; charset=utf-8 39
+2023-04-07 18:43:09.646 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.FloorController.AddFloor (DeskAPI)'
+2023-04-07 18:43:09.648 +05:30 [INF] Route matched with {action = "AddFloor", controller = "Floor"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddFloor(DeskEntity.Model.Floor) on controller DeskAPI.Controllers.FloorController (DeskAPI).
+2023-04-07 18:43:09.653 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:43:09.673 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [floors] ([FloorName])
+VALUES (@p0);
+SELECT [FloorId]
+FROM [floors]
+WHERE @@ROWCOUNT = 1 AND [FloorId] = scope_identity();
+2023-04-07 18:43:09.676 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-04-07 18:43:09.677 +05:30 [INF] Executed action DeskAPI.Controllers.FloorController.AddFloor (DeskAPI) in 29.1438ms
+2023-04-07 18:43:09.677 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.FloorController.AddFloor (DeskAPI)'
+2023-04-07 18:43:09.677 +05:30 [INF] Request finished in 34.1523ms 200 text/plain; charset=utf-8
+2023-04-07 18:43:17.103 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Seat/GetAllSeats  
+2023-04-07 18:43:17.104 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.SeatController.GetAllSeats (DeskAPI)'
+2023-04-07 18:43:17.106 +05:30 [INF] Route matched with {action = "GetAllSeats", controller = "Seat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Seat] GetAllSeats() on controller DeskAPI.Controllers.SeatController (DeskAPI).
+2023-04-07 18:43:17.108 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:43:17.121 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SeatId], [s].[FloorId], [s].[SeatNumber], [s].[Status], [f].[FloorId], [f].[FloorName]
+FROM [seats] AS [s]
+INNER JOIN [floors] AS [f] ON [s].[FloorId] = [f].[FloorId]
+2023-04-07 18:43:17.121 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Seat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:43:17.124 +05:30 [INF] Executed action DeskAPI.Controllers.SeatController.GetAllSeats (DeskAPI) in 17.5164ms
+2023-04-07 18:43:17.124 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.SeatController.GetAllSeats (DeskAPI)'
+2023-04-07 18:43:17.124 +05:30 [INF] Request finished in 20.9399ms 200 application/json; charset=utf-8
+2023-04-07 18:43:34.450 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/Seat/AddSeat application/json; charset=utf-8 70
+2023-04-07 18:43:34.454 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.SeatController.AddSeat (DeskAPI)'
+2023-04-07 18:43:34.456 +05:30 [INF] Route matched with {action = "AddSeat", controller = "Seat"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddSeat(DeskEntity.Model.Seat) on controller DeskAPI.Controllers.SeatController (DeskAPI).
+2023-04-07 18:43:34.462 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:43:34.495 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [seats] ([FloorId], [SeatNumber], [Status])
+VALUES (@p0, @p1, @p2);
+SELECT [SeatId]
+FROM [seats]
+WHERE @@ROWCOUNT = 1 AND [SeatId] = scope_identity();
+2023-04-07 18:43:34.502 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-04-07 18:43:34.503 +05:30 [INF] Executed action DeskAPI.Controllers.SeatController.AddSeat (DeskAPI) in 46.2617ms
+2023-04-07 18:43:34.503 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.SeatController.AddSeat (DeskAPI)'
+2023-04-07 18:43:34.503 +05:30 [INF] Request finished in 53.2166ms 200 text/plain; charset=utf-8
+2023-04-07 18:43:46.097 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/Seat/AddSeat application/json; charset=utf-8 70
+2023-04-07 18:43:46.097 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.SeatController.AddSeat (DeskAPI)'
+2023-04-07 18:43:46.101 +05:30 [INF] Route matched with {action = "AddSeat", controller = "Seat"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddSeat(DeskEntity.Model.Seat) on controller DeskAPI.Controllers.SeatController (DeskAPI).
+2023-04-07 18:43:46.105 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:43:46.109 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [seats] ([FloorId], [SeatNumber], [Status])
+VALUES (@p0, @p1, @p2);
+SELECT [SeatId]
+FROM [seats]
+WHERE @@ROWCOUNT = 1 AND [SeatId] = scope_identity();
+2023-04-07 18:43:46.111 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-04-07 18:43:46.112 +05:30 [INF] Executed action DeskAPI.Controllers.SeatController.AddSeat (DeskAPI) in 9.9234ms
+2023-04-07 18:43:46.112 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.SeatController.AddSeat (DeskAPI)'
+2023-04-07 18:43:46.112 +05:30 [INF] Request finished in 15.6116ms 200 text/plain; charset=utf-8
+2023-04-07 18:43:54.418 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Floor/GetFloor  
+2023-04-07 18:43:54.419 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.FloorController.GetFloor (DeskAPI)'
+2023-04-07 18:43:54.420 +05:30 [INF] Route matched with {action = "GetFloor", controller = "Floor"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Floor] GetFloor() on controller DeskAPI.Controllers.FloorController (DeskAPI).
+2023-04-07 18:43:54.421 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:43:54.426 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FloorId], [f].[FloorName]
+FROM [floors] AS [f]
+2023-04-07 18:43:54.428 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Floor, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:43:54.430 +05:30 [INF] Executed action DeskAPI.Controllers.FloorController.GetFloor (DeskAPI) in 9.683ms
+2023-04-07 18:43:54.430 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.FloorController.GetFloor (DeskAPI)'
+2023-04-07 18:43:54.431 +05:30 [INF] Request finished in 12.6299ms 200 application/json; charset=utf-8
+2023-04-07 18:44:09.136 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 18:44:09.136 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:44:09.137 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 18:44:09.139 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:09.141 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 18:44:09.142 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 18:44:09.142 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 5.5461ms
+2023-04-07 18:44:09.143 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:44:09.143 +05:30 [INF] Request finished in 7.0741ms 200 application/json; charset=utf-8
+2023-04-07 18:44:09.185 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Employee/GetEmployeeById?employeeId=1  
+2023-04-07 18:44:09.186 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.GetEmployeeById (DeskAPI)'
+2023-04-07 18:44:09.186 +05:30 [INF] Route matched with {action = "GetEmployeeById", controller = "Employee"}. Executing controller action with signature DeskEntity.Model.Employee GetEmployeeById(Int32) on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 18:44:09.188 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:09.194 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [employees] AS [e]
+INNER JOIN [LoginTables] AS [l] ON [e].[EmployeeID] = [l].[ID]
+2023-04-07 18:44:09.195 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskEntity.Model.Employee'.
+2023-04-07 18:44:09.195 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.GetEmployeeById (DeskAPI) in 9.1142ms
+2023-04-07 18:44:09.196 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.GetEmployeeById (DeskAPI)'
+2023-04-07 18:44:09.196 +05:30 [INF] Request finished in 10.689ms 200 application/json; charset=utf-8
+2023-04-07 18:44:10.774 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetSeatBookingByEmployeeId?employeeid=1  
+2023-04-07 18:44:10.778 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetSeatBookingByEmployeeId (DeskAPI)'
+2023-04-07 18:44:10.785 +05:30 [INF] Route matched with {action = "GetSeatBookingByEmployeeId", controller = "BookingSeat"}. Executing controller action with signature DeskEntity.Model.BookingSeat GetSeatBookingByEmployeeId(Int32) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:44:10.788 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:10.821 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [s].[SeatId], [s].[FloorId], [s].[SeatNumber], [s].[Status], [f].[FloorId], [f].[FloorName]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+INNER JOIN [seats] AS [s] ON [b].[SeatId] = [s].[SeatId]
+INNER JOIN [floors] AS [f] ON [s].[FloorId] = [f].[FloorId]
+2023-04-07 18:44:10.824 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetSeatBookingByEmployeeId (DeskAPI) in 38.7385ms
+2023-04-07 18:44:10.824 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetSeatBookingByEmployeeId (DeskAPI)'
+2023-04-07 18:44:10.829 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at DeskData.Repository.BookingSeatRepository.GetBookingSeatByEmployeeId(Int32 employeeid) in C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskData\Repository\BookingSeatRepository.cs:line 89
+   at DeskBusiness.Services.BookingSeatService.GetBookingSeatByEmployeeId(Int32 employeeid) in C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskBusiness\Services\BookingSeatService.cs:line 46
+   at DeskAPI.Controllers.BookingSeatController.GetSeatBookingByEmployeeId(Int32 employeeid) in C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskAPI\Controllers\BookingSeatController.cs:line 75
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-07 18:44:10.954 +05:30 [INF] Request finished in 180.1101ms 500 text/plain
+2023-04-07 18:44:10.968 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Floor/GetFloor  
+2023-04-07 18:44:10.969 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.FloorController.GetFloor (DeskAPI)'
+2023-04-07 18:44:10.969 +05:30 [INF] Route matched with {action = "GetFloor", controller = "Floor"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Floor] GetFloor() on controller DeskAPI.Controllers.FloorController (DeskAPI).
+2023-04-07 18:44:10.970 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:10.971 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FloorId], [f].[FloorName]
+FROM [floors] AS [f]
+2023-04-07 18:44:10.972 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Floor, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:44:10.973 +05:30 [INF] Executed action DeskAPI.Controllers.FloorController.GetFloor (DeskAPI) in 3.9921ms
+2023-04-07 18:44:10.973 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.FloorController.GetFloor (DeskAPI)'
+2023-04-07 18:44:10.973 +05:30 [INF] Request finished in 5.4881ms 200 application/json; charset=utf-8
+2023-04-07 18:44:26.504 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/BookingSeat/AddSeatBooking application/json; charset=utf-8 275
+2023-04-07 18:44:26.504 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.AddSeatBooking (DeskAPI)'
+2023-04-07 18:44:26.508 +05:30 [INF] Route matched with {action = "AddSeatBooking", controller = "BookingSeat"}. Executing controller action with signature Int32 AddSeatBooking(DeskEntity.Model.BookingSeat) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:44:26.532 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:26.634 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [bookingSeats] ([EmployeeID], [FromDate], [SeatId], [SeatShiftTime], [SeatStatus], [ShiftEnd], [ShiftStart], [ToDate], [bookingcount])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [BookingSeatId]
+FROM [bookingSeats]
+WHERE @@ROWCOUNT = 1 AND [BookingSeatId] = scope_identity();
+2023-04-07 18:44:26.651 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount]
+FROM [bookingSeats] AS [b]
+2023-04-07 18:44:26.653 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2023-04-07 18:44:26.653 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.AddSeatBooking (DeskAPI) in 145.0346ms
+2023-04-07 18:44:26.654 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.AddSeatBooking (DeskAPI)'
+2023-04-07 18:44:26.654 +05:30 [INF] Request finished in 150.3638ms 200 application/json; charset=utf-8
+2023-04-07 18:44:26.725 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Seat/GetAllSeatsByFloorId?floorId=1  
+2023-04-07 18:44:26.725 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.SeatController.GetAllSeatsFloorId (DeskAPI)'
+2023-04-07 18:44:26.728 +05:30 [INF] Route matched with {action = "GetAllSeatsFloorId", controller = "Seat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Seat] GetAllSeatsFloorId(Int32) on controller DeskAPI.Controllers.SeatController (DeskAPI).
+2023-04-07 18:44:26.733 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:26.737 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SeatId], [s].[FloorId], [s].[SeatNumber], [s].[Status], [f].[FloorId], [f].[FloorName]
+FROM [seats] AS [s]
+INNER JOIN [floors] AS [f] ON [s].[FloorId] = [f].[FloorId]
+2023-04-07 18:44:26.739 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Seat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:44:26.742 +05:30 [INF] Executed action DeskAPI.Controllers.SeatController.GetAllSeatsFloorId (DeskAPI) in 14.1728ms
+2023-04-07 18:44:26.742 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.SeatController.GetAllSeatsFloorId (DeskAPI)'
+2023-04-07 18:44:26.742 +05:30 [INF] Request finished in 17.6256ms 200 application/json; charset=utf-8
+2023-04-07 18:44:29.810 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Seat/GetSeatsById?seatId=2  
+2023-04-07 18:44:29.810 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.SeatController.GetSeatById (DeskAPI)'
+2023-04-07 18:44:29.813 +05:30 [INF] Route matched with {action = "GetSeatById", controller = "Seat"}. Executing controller action with signature DeskEntity.Model.Seat GetSeatById(Int32) on controller DeskAPI.Controllers.SeatController (DeskAPI).
+2023-04-07 18:44:29.816 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:29.818 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SeatId], [s].[FloorId], [s].[SeatNumber], [s].[Status], [f].[FloorId], [f].[FloorName]
+FROM [seats] AS [s]
+INNER JOIN [floors] AS [f] ON [s].[FloorId] = [f].[FloorId]
+2023-04-07 18:44:29.826 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskEntity.Model.Seat'.
+2023-04-07 18:44:29.827 +05:30 [INF] Executed action DeskAPI.Controllers.SeatController.GetSeatById (DeskAPI) in 13.9803ms
+2023-04-07 18:44:29.827 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.SeatController.GetSeatById (DeskAPI)'
+2023-04-07 18:44:29.827 +05:30 [INF] Request finished in 17.9757ms 200 application/json; charset=utf-8
+2023-04-07 18:44:29.841 +05:30 [INF] Request starting HTTP/1.1 PUT https://localhost:44385/api/Seat/UpdateSeat application/json; charset=utf-8 104
+2023-04-07 18:44:29.841 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.SeatController.UpdateSeat (DeskAPI)'
+2023-04-07 18:44:29.844 +05:30 [INF] Route matched with {action = "UpdateSeat", controller = "Seat"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateSeat(DeskEntity.Model.Seat) on controller DeskAPI.Controllers.SeatController (DeskAPI).
+2023-04-07 18:44:29.852 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:29.867 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [seats] SET [FloorId] = @p0, [SeatNumber] = @p1, [Status] = @p2
+WHERE [SeatId] = @p3;
+SELECT @@ROWCOUNT;
+2023-04-07 18:44:29.868 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-04-07 18:44:29.869 +05:30 [INF] Executed action DeskAPI.Controllers.SeatController.UpdateSeat (DeskAPI) in 25.0563ms
+2023-04-07 18:44:29.869 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.SeatController.UpdateSeat (DeskAPI)'
+2023-04-07 18:44:29.869 +05:30 [INF] Request finished in 28.7627ms 200 text/plain; charset=utf-8
+2023-04-07 18:44:29.876 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetSeatBookingById?bookingseatId=1  
+2023-04-07 18:44:29.877 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetSeatBookingById (DeskAPI)'
+2023-04-07 18:44:29.878 +05:30 [INF] Route matched with {action = "GetSeatBookingById", controller = "BookingSeat"}. Executing controller action with signature DeskEntity.Model.BookingSeat GetSeatBookingById(Int32) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:44:29.880 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:29.890 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [s].[SeatId], [s].[FloorId], [s].[SeatNumber], [s].[Status]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+INNER JOIN [seats] AS [s] ON [b].[SeatId] = [s].[SeatId]
+2023-04-07 18:44:29.892 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskEntity.Model.BookingSeat'.
+2023-04-07 18:44:29.894 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetSeatBookingById (DeskAPI) in 16.4468ms
+2023-04-07 18:44:29.894 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetSeatBookingById (DeskAPI)'
+2023-04-07 18:44:29.894 +05:30 [INF] Request finished in 18.1956ms 200 application/json; charset=utf-8
+2023-04-07 18:44:29.909 +05:30 [INF] Request starting HTTP/1.1 PUT https://localhost:44385/api/BookingSeat/UpdateSeatBooking application/json; charset=utf-8 517
+2023-04-07 18:44:29.909 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.UpdateSeatBooking (DeskAPI)'
+2023-04-07 18:44:29.910 +05:30 [INF] Route matched with {action = "UpdateSeatBooking", controller = "BookingSeat"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateSeatBooking(DeskEntity.Model.BookingSeat) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:44:29.911 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:29.922 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [bookingSeats] SET [EmployeeID] = @p0, [FromDate] = @p1, [SeatId] = @p2, [SeatShiftTime] = @p3, [SeatStatus] = @p4, [ShiftEnd] = @p5, [ShiftStart] = @p6, [ToDate] = @p7, [bookingcount] = @p8
+WHERE [BookingSeatId] = @p9;
+SELECT @@ROWCOUNT;
+2023-04-07 18:44:29.923 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-04-07 18:44:29.923 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.UpdateSeatBooking (DeskAPI) in 13.1143ms
+2023-04-07 18:44:29.923 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.UpdateSeatBooking (DeskAPI)'
+2023-04-07 18:44:29.924 +05:30 [INF] Request finished in 14.6605ms 200 text/plain; charset=utf-8
+2023-04-07 18:44:35.209 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/Choices/AddChoice application/json; charset=utf-8 88
+2023-04-07 18:44:35.209 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.ChoicesController.AddChoice (DeskAPI)'
+2023-04-07 18:44:35.213 +05:30 [INF] Route matched with {action = "AddChoice", controller = "Choices"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddChoice(DeskEntity.Model.Choices) on controller DeskAPI.Controllers.ChoicesController (DeskAPI).
+2023-04-07 18:44:35.224 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:35.249 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [choices] ([BookingSeatId], [Data], [FoodPerferences])
+VALUES (@p0, @p1, @p2);
+SELECT [ChoiceId]
+FROM [choices]
+WHERE @@ROWCOUNT = 1 AND [ChoiceId] = scope_identity();
+2023-04-07 18:44:35.252 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-04-07 18:44:35.252 +05:30 [INF] Executed action DeskAPI.Controllers.ChoicesController.AddChoice (DeskAPI) in 39.3039ms
+2023-04-07 18:44:35.253 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.ChoicesController.AddChoice (DeskAPI)'
+2023-04-07 18:44:35.253 +05:30 [INF] Request finished in 44.1979ms 200 text/plain; charset=utf-8
+2023-04-07 18:44:35.284 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetSeatBookingById?bookingseatId=1  
+2023-04-07 18:44:35.285 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetSeatBookingById (DeskAPI)'
+2023-04-07 18:44:35.285 +05:30 [INF] Route matched with {action = "GetSeatBookingById", controller = "BookingSeat"}. Executing controller action with signature DeskEntity.Model.BookingSeat GetSeatBookingById(Int32) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:44:35.286 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:35.287 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [s].[SeatId], [s].[FloorId], [s].[SeatNumber], [s].[Status]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+INNER JOIN [seats] AS [s] ON [b].[SeatId] = [s].[SeatId]
+2023-04-07 18:44:35.287 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskEntity.Model.BookingSeat'.
+2023-04-07 18:44:35.288 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetSeatBookingById (DeskAPI) in 2.809ms
+2023-04-07 18:44:35.288 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetSeatBookingById (DeskAPI)'
+2023-04-07 18:44:35.288 +05:30 [INF] Request finished in 3.8005ms 200 application/json; charset=utf-8
+2023-04-07 18:44:41.853 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Employee/GetEmployeeById?employeeId=1  
+2023-04-07 18:44:41.854 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.GetEmployeeById (DeskAPI)'
+2023-04-07 18:44:41.854 +05:30 [INF] Route matched with {action = "GetEmployeeById", controller = "Employee"}. Executing controller action with signature DeskEntity.Model.Employee GetEmployeeById(Int32) on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 18:44:41.855 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:41.856 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [employees] AS [e]
+INNER JOIN [LoginTables] AS [l] ON [e].[EmployeeID] = [l].[ID]
+2023-04-07 18:44:41.858 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskEntity.Model.Employee'.
+2023-04-07 18:44:41.859 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.GetEmployeeById (DeskAPI) in 5.2079ms
+2023-04-07 18:44:41.859 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.GetEmployeeById (DeskAPI)'
+2023-04-07 18:44:41.860 +05:30 [INF] Request finished in 6.5671ms 200 application/json; charset=utf-8
+2023-04-07 18:44:50.605 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 18:44:50.605 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:44:50.605 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 18:44:50.608 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:44:50.609 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 18:44:50.611 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 18:44:50.613 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 7.3119ms
+2023-04-07 18:44:50.613 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:44:50.613 +05:30 [INF] Request finished in 8.6996ms 200 application/json; charset=utf-8
+2023-04-07 18:45:03.095 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetAllBookingSeats  
+2023-04-07 18:45:03.096 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI)'
+2023-04-07 18:45:03.096 +05:30 [INF] Route matched with {action = "GetAllBookingSeats", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetAllBookingSeats() on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:45:03.097 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:45:03.098 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [s].[SeatId], [s].[FloorId], [s].[SeatNumber], [s].[Status]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+INNER JOIN [seats] AS [s] ON [b].[SeatId] = [s].[SeatId]
+2023-04-07 18:45:03.100 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:45:03.101 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI) in 5.0907ms
+2023-04-07 18:45:03.101 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI)'
+2023-04-07 18:45:03.102 +05:30 [INF] Request finished in 6.7554ms 200 application/json; charset=utf-8
+2023-04-07 18:45:56.981 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-07  
+2023-04-07 18:45:56.982 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:45:56.983 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:45:56.986 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:45:57.004 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 18:45:57.005 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:45:57.005 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 21.8793ms
+2023-04-07 18:45:57.005 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:45:57.006 +05:30 [INF] Request finished in 24.3635ms 200 application/json; charset=utf-8
+2023-04-07 18:45:57.018 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-08  
+2023-04-07 18:45:57.019 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:45:57.019 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:45:57.020 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:45:57.020 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 18:45:57.021 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:45:57.021 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 1.8205ms
+2023-04-07 18:45:57.021 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:45:57.021 +05:30 [INF] Request finished in 2.6752ms 200 application/json; charset=utf-8
+2023-04-07 18:45:57.045 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Employee/GetAllEmployees  
+2023-04-07 18:45:57.046 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 18:45:57.047 +05:30 [INF] Route matched with {action = "GetAllEmployees", controller = "Employee"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Employee] GetAllEmployees() on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 18:45:57.047 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:45:57.050 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [employees] AS [e]
+INNER JOIN [LoginTables] AS [l] ON [e].[EmployeeID] = [l].[ID]
+2023-04-07 18:45:57.050 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Employee, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:45:57.051 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI) in 4.0882ms
+2023-04-07 18:45:57.051 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 18:45:57.051 +05:30 [INF] Request finished in 5.7016ms 200 application/json; charset=utf-8
+2023-04-07 18:46:26.366 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetAllBookingSeats  
+2023-04-07 18:46:26.367 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI)'
+2023-04-07 18:46:26.367 +05:30 [INF] Route matched with {action = "GetAllBookingSeats", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetAllBookingSeats() on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:46:26.368 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:46:26.377 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [s].[SeatId], [s].[FloorId], [s].[SeatNumber], [s].[Status]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+INNER JOIN [seats] AS [s] ON [b].[SeatId] = [s].[SeatId]
+2023-04-07 18:46:26.378 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:46:26.379 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI) in 11.715ms
+2023-04-07 18:46:26.379 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI)'
+2023-04-07 18:46:26.379 +05:30 [INF] Request finished in 13.0785ms 200 application/json; charset=utf-8
+2023-04-07 18:46:54.177 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-07  
+2023-04-07 18:46:54.178 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:46:54.178 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:46:54.180 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:46:54.189 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 18:46:54.191 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:46:54.192 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 13.8724ms
+2023-04-07 18:46:54.192 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:46:54.193 +05:30 [INF] Request finished in 15.3723ms 200 application/json; charset=utf-8
+2023-04-07 18:46:54.205 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-08  
+2023-04-07 18:46:54.206 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:46:54.206 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:46:54.208 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:46:54.209 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 18:46:54.210 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:46:54.211 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 4.0927ms
+2023-04-07 18:46:54.211 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:46:54.211 +05:30 [INF] Request finished in 6.0261ms 200 application/json; charset=utf-8
+2023-04-07 18:46:54.225 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Employee/GetAllEmployees  
+2023-04-07 18:46:54.225 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 18:46:54.226 +05:30 [INF] Route matched with {action = "GetAllEmployees", controller = "Employee"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Employee] GetAllEmployees() on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 18:46:54.226 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:46:54.229 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [employees] AS [e]
+INNER JOIN [LoginTables] AS [l] ON [e].[EmployeeID] = [l].[ID]
+2023-04-07 18:46:54.229 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Employee, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:46:54.230 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI) in 3.9437ms
+2023-04-07 18:46:54.230 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 18:46:54.230 +05:30 [INF] Request finished in 4.6857ms 200 application/json; charset=utf-8
+2023-04-07 18:51:54.150 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 18:51:54.184 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/weatherforecast  
+2023-04-07 18:51:54.203 +05:30 [INF] Hosting environment: Development
+2023-04-07 18:51:54.203 +05:30 [INF] Content root path: C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskAPI
+2023-04-07 18:51:54.291 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 18:51:54.332 +05:30 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskAPI.WeatherForecast] Get() on controller DeskAPI.Controllers.WeatherForecastController (DeskAPI).
+2023-04-07 18:51:54.338 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskAPI.WeatherForecast[]'.
+2023-04-07 18:51:54.379 +05:30 [INF] Executed action DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI) in 36.9773ms
+2023-04-07 18:51:54.381 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 18:51:54.396 +05:30 [INF] Request finished in 219.3419ms 200 application/json; charset=utf-8
+2023-04-07 18:51:57.901 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/index.html  
+2023-04-07 18:51:58.066 +05:30 [INF] Request finished in 165.27ms 200 text/html;charset=utf-8
+2023-04-07 18:51:58.094 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_framework/aspnetcore-browser-refresh.js  
+2023-04-07 18:51:58.097 +05:30 [INF] Request finished in 3.0139ms 200 application/javascript; charset=utf-8
+2023-04-07 18:51:58.124 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_vs/browserLink  
+2023-04-07 18:51:58.161 +05:30 [INF] Request finished in 37.7059ms 200 text/javascript; charset=UTF-8
+2023-04-07 18:51:58.310 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/v1/swagger.json  
+2023-04-07 18:51:58.512 +05:30 [INF] Request finished in 201.5749ms 200 application/json;charset=utf-8
+2023-04-07 18:52:21.127 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 18:52:21.130 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:52:21.141 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 18:52:22.161 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:52:22.874 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 18:52:22.968 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 18:52:22.969 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 1828.239ms
+2023-04-07 18:52:22.969 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:52:22.972 +05:30 [INF] Request finished in 1847.0197ms 200 application/json; charset=utf-8
+2023-04-07 18:52:34.518 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetAllBookingSeats  
+2023-04-07 18:52:34.522 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI)'
+2023-04-07 18:52:34.528 +05:30 [INF] Route matched with {action = "GetAllBookingSeats", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetAllBookingSeats() on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:52:34.571 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:52:34.774 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [s].[SeatId], [s].[FloorId], [s].[SeatNumber], [s].[Status]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+INNER JOIN [seats] AS [s] ON [b].[SeatId] = [s].[SeatId]
+2023-04-07 18:52:34.912 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:52:34.921 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI) in 391.9962ms
+2023-04-07 18:52:34.921 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetAllBookingSeats (DeskAPI)'
+2023-04-07 18:52:34.922 +05:30 [INF] Request finished in 404.6991ms 200 application/json; charset=utf-8
+2023-04-07 18:55:44.251 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 18:55:44.255 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:55:44.256 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 18:55:44.272 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:55:44.276 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 18:55:44.277 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 18:55:44.277 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 20.4914ms
+2023-04-07 18:55:44.277 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:55:44.278 +05:30 [INF] Request finished in 26.653ms 200 application/json; charset=utf-8
+2023-04-07 18:56:12.649 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-07  
+2023-04-07 18:56:12.652 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:56:12.656 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:56:12.663 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:56:12.679 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 18:56:12.680 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:56:12.681 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 24.9393ms
+2023-04-07 18:56:12.681 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:56:12.681 +05:30 [INF] Request finished in 32.4826ms 200 application/json; charset=utf-8
+2023-04-07 18:56:12.782 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-08  
+2023-04-07 18:56:12.783 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:56:12.784 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:56:12.789 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:56:12.793 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 18:56:12.793 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:56:12.794 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 9.7722ms
+2023-04-07 18:56:12.794 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:56:12.794 +05:30 [INF] Request finished in 11.764ms 200 application/json; charset=utf-8
+2023-04-07 18:56:12.835 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Employee/GetAllEmployees  
+2023-04-07 18:56:12.835 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 18:56:12.837 +05:30 [INF] Route matched with {action = "GetAllEmployees", controller = "Employee"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Employee] GetAllEmployees() on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 18:56:12.839 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:56:12.855 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [employees] AS [e]
+INNER JOIN [LoginTables] AS [l] ON [e].[EmployeeID] = [l].[ID]
+2023-04-07 18:56:12.857 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Employee, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:56:12.859 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI) in 21.3531ms
+2023-04-07 18:56:12.859 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 18:56:12.859 +05:30 [INF] Request finished in 24.3931ms 200 application/json; charset=utf-8
+2023-04-07 18:58:32.181 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 18:58:32.182 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:58:32.183 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 18:58:32.188 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:58:32.193 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 18:58:32.195 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 18:58:32.195 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 11.7582ms
+2023-04-07 18:58:32.196 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 18:58:32.196 +05:30 [INF] Request finished in 14.7628ms 200 application/json; charset=utf-8
+2023-04-07 18:58:53.329 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-07  
+2023-04-07 18:58:53.329 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:58:53.330 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:58:53.331 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:58:53.336 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 18:58:53.337 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:58:53.337 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 7.4851ms
+2023-04-07 18:58:53.337 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:58:53.338 +05:30 [INF] Request finished in 9.0504ms 200 application/json; charset=utf-8
+2023-04-07 18:58:53.402 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-08  
+2023-04-07 18:58:53.402 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:58:53.402 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 18:58:53.403 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:58:53.403 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 18:58:53.404 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:58:53.404 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 1.449ms
+2023-04-07 18:58:53.404 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 18:58:53.404 +05:30 [INF] Request finished in 2.157ms 200 application/json; charset=utf-8
+2023-04-07 18:58:53.435 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Employee/GetAllEmployees  
+2023-04-07 18:58:53.441 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 18:58:53.442 +05:30 [INF] Route matched with {action = "GetAllEmployees", controller = "Employee"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Employee] GetAllEmployees() on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 18:58:53.443 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 18:58:53.448 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [employees] AS [e]
+INNER JOIN [LoginTables] AS [l] ON [e].[EmployeeID] = [l].[ID]
+2023-04-07 18:58:53.448 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Employee, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 18:58:53.449 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI) in 6.675ms
+2023-04-07 18:58:53.449 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 18:58:53.449 +05:30 [INF] Request finished in 13.7856ms 200 application/json; charset=utf-8
+2023-04-07 19:02:20.029 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 19:02:20.083 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/weatherforecast  
+2023-04-07 19:02:20.107 +05:30 [INF] Hosting environment: Development
+2023-04-07 19:02:20.108 +05:30 [INF] Content root path: C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskAPI
+2023-04-07 19:02:20.227 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 19:02:20.277 +05:30 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskAPI.WeatherForecast] Get() on controller DeskAPI.Controllers.WeatherForecastController (DeskAPI).
+2023-04-07 19:02:20.288 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskAPI.WeatherForecast[]'.
+2023-04-07 19:02:20.347 +05:30 [INF] Executed action DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI) in 58.6703ms
+2023-04-07 19:02:20.350 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 19:02:20.369 +05:30 [INF] Request finished in 309.0942ms 200 application/json; charset=utf-8
+2023-04-07 19:02:22.738 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/index.html  
+2023-04-07 19:02:22.908 +05:30 [INF] Request finished in 169.8569ms 200 text/html;charset=utf-8
+2023-04-07 19:02:22.925 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_framework/aspnetcore-browser-refresh.js  
+2023-04-07 19:02:22.928 +05:30 [INF] Request finished in 2.6918ms 200 application/javascript; charset=utf-8
+2023-04-07 19:02:22.973 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_vs/browserLink  
+2023-04-07 19:02:23.021 +05:30 [INF] Request finished in 47.8528ms 200 text/javascript; charset=UTF-8
+2023-04-07 19:02:23.174 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/v1/swagger.json  
+2023-04-07 19:02:23.462 +05:30 [INF] Request finished in 287.5069ms 200 application/json;charset=utf-8
+2023-04-07 19:02:46.585 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 19:02:46.587 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 19:02:46.600 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 19:02:47.639 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:02:48.660 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 19:02:48.761 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 19:02:48.763 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 2162.9782ms
+2023-04-07 19:02:48.763 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 19:02:48.766 +05:30 [INF] Request finished in 2182.947ms 200 application/json; charset=utf-8
+2023-04-07 19:03:21.814 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-07  
+2023-04-07 19:03:21.817 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:03:21.820 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 19:03:21.869 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:03:22.041 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 19:03:22.124 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 19:03:22.137 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 317.4615ms
+2023-04-07 19:03:22.138 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:03:22.138 +05:30 [INF] Request finished in 324.3891ms 200 application/json; charset=utf-8
+2023-04-07 19:03:22.198 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-08  
+2023-04-07 19:03:22.201 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:03:22.201 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 19:03:22.209 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:03:22.215 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 19:03:22.215 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 19:03:22.216 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 14.1573ms
+2023-04-07 19:03:22.216 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:03:22.216 +05:30 [INF] Request finished in 17.7904ms 200 application/json; charset=utf-8
+2023-04-07 19:03:22.238 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Employee/GetAllEmployees  
+2023-04-07 19:03:22.239 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 19:03:22.240 +05:30 [INF] Route matched with {action = "GetAllEmployees", controller = "Employee"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Employee] GetAllEmployees() on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 19:03:22.241 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:03:22.250 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [employees] AS [e]
+INNER JOIN [LoginTables] AS [l] ON [e].[EmployeeID] = [l].[ID]
+2023-04-07 19:03:22.252 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Employee, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 19:03:22.253 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI) in 12.861ms
+2023-04-07 19:03:22.253 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 19:03:22.253 +05:30 [INF] Request finished in 14.956ms 200 application/json; charset=utf-8
+2023-04-07 19:06:06.969 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 19:06:07.024 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/index.html  
+2023-04-07 19:06:07.024 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/weatherforecast  
+2023-04-07 19:06:07.057 +05:30 [INF] Hosting environment: Development
+2023-04-07 19:06:07.058 +05:30 [INF] Content root path: C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskAPI
+2023-04-07 19:06:07.195 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 19:06:07.258 +05:30 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskAPI.WeatherForecast] Get() on controller DeskAPI.Controllers.WeatherForecastController (DeskAPI).
+2023-04-07 19:06:07.270 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskAPI.WeatherForecast[]'.
+2023-04-07 19:06:07.306 +05:30 [INF] Executed action DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI) in 31.7095ms
+2023-04-07 19:06:07.310 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 19:06:07.322 +05:30 [INF] Request finished in 307.3406ms 200 application/json; charset=utf-8
+2023-04-07 19:06:07.470 +05:30 [INF] Request finished in 460.0878ms 200 text/html;charset=utf-8
+2023-04-07 19:06:07.537 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_framework/aspnetcore-browser-refresh.js  
+2023-04-07 19:06:07.543 +05:30 [INF] Request finished in 8.1481ms 200 application/javascript; charset=utf-8
+2023-04-07 19:06:07.543 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_vs/browserLink  
+2023-04-07 19:06:07.674 +05:30 [INF] Request finished in 130.9788ms 200 text/javascript; charset=UTF-8
+2023-04-07 19:06:07.944 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/v1/swagger.json  
+2023-04-07 19:06:08.290 +05:30 [INF] Request finished in 346.2438ms 200 application/json;charset=utf-8
+2023-04-07 19:06:28.944 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 19:06:28.946 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 19:06:28.962 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 19:06:30.081 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:06:30.821 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 19:06:30.914 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 19:06:30.914 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 1951.6039ms
+2023-04-07 19:06:30.915 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 19:06:30.919 +05:30 [INF] Request finished in 1976.4399ms 200 application/json; charset=utf-8
+2023-04-07 19:06:50.274 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-07  
+2023-04-07 19:06:50.277 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:06:50.280 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 19:06:50.324 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:06:50.481 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 19:06:50.554 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 19:06:50.561 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 280.7142ms
+2023-04-07 19:06:50.561 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:06:50.561 +05:30 [INF] Request finished in 286.8894ms 200 application/json; charset=utf-8
+2023-04-07 19:06:50.623 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-08  
+2023-04-07 19:06:50.639 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:06:50.640 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 19:06:50.665 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:06:50.676 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 19:06:50.677 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 19:06:50.678 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 36.4085ms
+2023-04-07 19:06:50.678 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:06:50.678 +05:30 [INF] Request finished in 55.3301ms 200 application/json; charset=utf-8
+2023-04-07 19:06:50.713 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Employee/GetAllEmployees  
+2023-04-07 19:06:50.713 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 19:06:50.715 +05:30 [INF] Route matched with {action = "GetAllEmployees", controller = "Employee"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Employee] GetAllEmployees() on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 19:06:50.716 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:06:50.726 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [employees] AS [e]
+INNER JOIN [LoginTables] AS [l] ON [e].[EmployeeID] = [l].[ID]
+2023-04-07 19:06:50.728 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Employee, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 19:06:50.729 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI) in 14.2176ms
+2023-04-07 19:06:50.729 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 19:06:50.729 +05:30 [INF] Request finished in 16.635ms 200 application/json; charset=utf-8
+2023-04-07 19:08:46.866 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 19:08:46.914 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/index.html  
+2023-04-07 19:08:46.914 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/weatherforecast  
+2023-04-07 19:08:46.940 +05:30 [INF] Hosting environment: Development
+2023-04-07 19:08:46.941 +05:30 [INF] Content root path: C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskAPI
+2023-04-07 19:08:47.076 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 19:08:47.125 +05:30 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskAPI.WeatherForecast] Get() on controller DeskAPI.Controllers.WeatherForecastController (DeskAPI).
+2023-04-07 19:08:47.136 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskAPI.WeatherForecast[]'.
+2023-04-07 19:08:47.175 +05:30 [INF] Executed action DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI) in 34.0238ms
+2023-04-07 19:08:47.182 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 19:08:47.191 +05:30 [INF] Request finished in 288.1838ms 200 application/json; charset=utf-8
+2023-04-07 19:08:47.323 +05:30 [INF] Request finished in 420.6675ms 200 text/html;charset=utf-8
+2023-04-07 19:08:47.350 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_framework/aspnetcore-browser-refresh.js  
+2023-04-07 19:08:47.356 +05:30 [INF] Request finished in 5.2609ms 200 application/javascript; charset=utf-8
+2023-04-07 19:08:47.373 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_vs/browserLink  
+2023-04-07 19:08:47.414 +05:30 [INF] Request finished in 41.797ms 200 text/javascript; charset=UTF-8
+2023-04-07 19:08:47.640 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/v1/swagger.json  
+2023-04-07 19:08:47.971 +05:30 [INF] Request finished in 331.1723ms 200 application/json;charset=utf-8
+2023-04-07 19:09:45.709 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 19:09:45.738 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/weatherforecast  
+2023-04-07 19:09:45.764 +05:30 [INF] Hosting environment: Development
+2023-04-07 19:09:45.764 +05:30 [INF] Content root path: C:\Users\ritik.sharan\Desktop\Deskify\New-Deskify\Deskify_3.1\DeskAPI
+2023-04-07 19:09:45.840 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 19:09:45.870 +05:30 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskAPI.WeatherForecast] Get() on controller DeskAPI.Controllers.WeatherForecastController (DeskAPI).
+2023-04-07 19:09:45.875 +05:30 [INF] Executing ObjectResult, writing value of type 'DeskAPI.WeatherForecast[]'.
+2023-04-07 19:09:45.908 +05:30 [INF] Executed action DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI) in 31.372ms
+2023-04-07 19:09:45.911 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.WeatherForecastController.Get (DeskAPI)'
+2023-04-07 19:09:45.919 +05:30 [INF] Request finished in 186.4175ms 200 application/json; charset=utf-8
+2023-04-07 19:09:46.022 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/favicon.ico  
+2023-04-07 19:09:46.028 +05:30 [INF] Request finished in 6.7222ms 404 
+2023-04-07 19:09:51.474 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/index.html  
+2023-04-07 19:09:51.703 +05:30 [INF] Request finished in 229.6491ms 200 text/html;charset=utf-8
+2023-04-07 19:09:51.727 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_framework/aspnetcore-browser-refresh.js  
+2023-04-07 19:09:51.730 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/_vs/browserLink  
+2023-04-07 19:09:51.736 +05:30 [INF] Request finished in 9.4138ms 200 application/javascript; charset=utf-8
+2023-04-07 19:09:51.769 +05:30 [INF] Request finished in 38.2971ms 200 text/javascript; charset=UTF-8
+2023-04-07 19:09:51.967 +05:30 [INF] Request starting HTTP/2.0 GET https://localhost:44385/swagger/v1/swagger.json  
+2023-04-07 19:09:52.262 +05:30 [INF] Request finished in 295.9286ms 200 application/json;charset=utf-8
+2023-04-07 19:10:10.887 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:44385/api/LoginTable/Login application/json; charset=utf-8 64
+2023-04-07 19:10:10.890 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 19:10:10.905 +05:30 [INF] Route matched with {action = "Login", controller = "LoginTable"}. Executing controller action with signature Int32[] Login(DeskEntity.Model.LoginTable) on controller DeskAPI.Controllers.LoginTableController (DeskAPI).
+2023-04-07 19:10:12.055 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:10:13.037 +05:30 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [LoginTables] AS [l]
+2023-04-07 19:10:13.173 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Int32[]'.
+2023-04-07 19:10:13.176 +05:30 [INF] Executed action DeskAPI.Controllers.LoginTableController.Login (DeskAPI) in 2270.0632ms
+2023-04-07 19:10:13.176 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.LoginTableController.Login (DeskAPI)'
+2023-04-07 19:10:13.183 +05:30 [INF] Request finished in 2298.0668ms 200 application/json; charset=utf-8
+2023-04-07 19:10:30.188 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-07  
+2023-04-07 19:10:30.192 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:10:30.195 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 19:10:30.235 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:10:30.386 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 19:10:30.460 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 19:10:30.467 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 272.0642ms
+2023-04-07 19:10:30.467 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:10:30.467 +05:30 [INF] Request finished in 279.1491ms 200 application/json; charset=utf-8
+2023-04-07 19:10:30.528 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/BookingSeat/GetBookingsByDate?date1=2023-04-08  
+2023-04-07 19:10:30.531 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:10:30.532 +05:30 [INF] Route matched with {action = "GetBookingsByDate", controller = "BookingSeat"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.BookingSeat] GetBookingsByDate(System.DateTime) on controller DeskAPI.Controllers.BookingSeatController (DeskAPI).
+2023-04-07 19:10:30.555 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:10:30.560 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingSeatId], [b].[EmployeeID], [b].[FromDate], [b].[SeatId], [b].[SeatShiftTime], [b].[SeatStatus], [b].[ShiftEnd], [b].[ShiftStart], [b].[ToDate], [b].[bookingcount], [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion]
+FROM [bookingSeats] AS [b]
+INNER JOIN [employees] AS [e] ON [b].[EmployeeID] = [e].[EmployeeID]
+2023-04-07 19:10:30.561 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.BookingSeat, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 19:10:30.562 +05:30 [INF] Executed action DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI) in 29.4109ms
+2023-04-07 19:10:30.562 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.BookingSeatController.GetBookingsByDate (DeskAPI)'
+2023-04-07 19:10:30.562 +05:30 [INF] Request finished in 34.4228ms 200 application/json; charset=utf-8
+2023-04-07 19:10:30.592 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:44385/api/Employee/GetAllEmployees  
+2023-04-07 19:10:30.593 +05:30 [INF] Executing endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 19:10:30.595 +05:30 [INF] Route matched with {action = "GetAllEmployees", controller = "Employee"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DeskEntity.Model.Employee] GetAllEmployees() on controller DeskAPI.Controllers.EmployeeController (DeskAPI).
+2023-04-07 19:10:30.596 +05:30 [INF] Entity Framework Core 5.0.0 initialized 'DeskDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-04-07 19:10:30.605 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeID], [e].[EmployeeName], [e].[EmployeeNumber], [e].[Gender], [e].[Image], [e].[PhoneNumber], [e].[Role], [e].[SecurityQuestion], [l].[ID], [l].[Email], [l].[Password], [l].[Type]
+FROM [employees] AS [e]
+INNER JOIN [LoginTables] AS [l] ON [e].[EmployeeID] = [l].[ID]
+2023-04-07 19:10:30.608 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DeskEntity.Model.Employee, DeskEntity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 19:10:30.610 +05:30 [INF] Executed action DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI) in 14.1498ms
+2023-04-07 19:10:30.610 +05:30 [INF] Executed endpoint 'DeskAPI.Controllers.EmployeeController.GetAllEmployees (DeskAPI)'
+2023-04-07 19:10:30.610 +05:30 [INF] Request finished in 17.8613ms 200 application/json; charset=utf-8

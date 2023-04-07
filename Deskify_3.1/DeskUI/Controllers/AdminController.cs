@@ -10,6 +10,7 @@ using System;
 using DeskData.Data;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DeskUI.Controllers
 {
@@ -668,6 +669,19 @@ namespace DeskUI.Controllers
             return View();
         }
 
+        public List<SelectListItem> ShiftTiming()
+        {
+            List<SelectListItem> shiftTiming = new List<SelectListItem>()
+            {
+                new SelectListItem { Value="Shift time", Text="Select Shift Time"},
+                new SelectListItem { Value = "09:00 AM - 06:00 PM", Text = "09:00 AM - 06:00 PM" },
+                new SelectListItem { Value = "06:00 AM - 02:00 PM", Text = "06:00 AM - 02:00 PM" },
+                new SelectListItem { Value = "02:00 PM - 10:00 PM", Text = "02:00 PM - 10:00 PM" },
+                new SelectListItem { Value = "10:00 AM - 06:00 PM", Text = "10:00 AM - 06:00 PM" },
+            };
+            return shiftTiming;
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAllBookingSeats()
         {
@@ -685,6 +699,7 @@ namespace DeskUI.Controllers
                     }
                 }
             }
+            ViewBag.shiftTimings = ShiftTiming();
             return View(bookingseatresult);
         }
         #endregion
