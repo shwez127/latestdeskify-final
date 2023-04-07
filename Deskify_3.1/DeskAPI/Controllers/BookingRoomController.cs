@@ -63,6 +63,16 @@ namespace DeskAPI.Controllers
         }
         #endregion
 
+
+        #region ROOMBYEMPLOYEEID
+
+        [HttpGet("GetBookingRoomByEmployeeId")]
+        public BookingRoom GetBookingRoomByEmployeeId(int employeeId)
+        {
+            return _bookingRoomService.GetBookingRoomByEmployeeId(employeeId);
+        }
+        #endregion
+
     }
 }
 

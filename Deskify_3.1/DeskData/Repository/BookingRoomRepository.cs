@@ -67,5 +67,20 @@ namespace DeskData.Repository
             _db.SaveChanges();
         }
         #endregion
+
+        public BookingRoom GetBookingRoomByEmployeeId(int employeeid)
+        {
+            List<BookingRoom> bookingRooms = new List<BookingRoom>();
+            var result = _db.bookingRooms.Include(obj => obj.Employee).Include(obj => obj.Room).ToList();
+            foreach (var bookingRoom in result)
+            {
+                if (employeeid == bookingRoom.EmployeeID)
+                {
+                    bookingRooms.Add(bookingRoom);
+                }
+            }
+            return bookingRooms.Last();
+
+        }
     }
 }

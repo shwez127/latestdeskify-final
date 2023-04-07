@@ -78,7 +78,7 @@ namespace DeskData.Repository
        public BookingSeat GetBookingSeatByEmployeeId(int employeeid)
         {
             List<BookingSeat> bookingSeats= new List<BookingSeat>();
-            var result = _db.bookingSeats.Include(obj => obj.Employee).Include(obj => obj.Seat).ToList();
+            var result = _db.bookingSeats.Include(obj => obj.Employee).Include(obj => obj.Seat).Include(obj=>obj.Seat.Floor).ToList();
             foreach (var bookingSeat in result)
             {
                 if (employeeid == bookingSeat.EmployeeID)

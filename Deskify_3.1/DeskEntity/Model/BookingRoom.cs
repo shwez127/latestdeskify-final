@@ -19,8 +19,6 @@ namespace DeskEntity.Model
         public DateTime MeetingStart { get; set; }
         public DateTime MeetingEnd { get; set; }
 
-        public int NumberofPeople { get; set; }
-
         [ForeignKey("Room")]
         public int RoomId { get; set; }
         public Room Room { get; set; }
