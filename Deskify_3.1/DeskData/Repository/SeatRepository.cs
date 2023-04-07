@@ -55,6 +55,7 @@ namespace DeskData.Repository
         {
             return _db.seats.Include(obj=>obj.Floor).ToList();
         }
+
         #endregion GetAllSeats
         public IEnumerable<Seat> GetSeatsByFloorId(int floorId)
         {

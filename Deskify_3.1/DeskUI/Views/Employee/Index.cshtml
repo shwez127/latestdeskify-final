@@ -24,67 +24,10 @@
 
 <body>
 <div>
-  <div class="modal fade" id="approved" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Approved</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Approved
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="pending" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Pending</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Pending
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="rejected" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Rejected</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Rejected
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="card-div">
     <div class="card p-2 mt-4">
 
-      <div class="card-title text-center">Hi, @Model.EmployeeName !
+      <div class="card-title text-center">Hi, @Model.EmployeeName!
         <br>
                     <div class="card-title text-center"> Today, @DateTime.Now.ToString("dddd, dd MMMM yyyy")</div>
       </div>
@@ -93,7 +36,7 @@
 
   <div class="message mb-4">
                 <div class="row row1 card-div mt-5 me-xl-5" >
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#approved"
+                    <button type="button"
                             class="card-button bg-transparent  middle-row mx-sm-4 mx-md-4 mx-xxl-5">
                         <div class="middle-row shadow p-3 mx-md-4 mx-xxl-5">
                         <img src="https://cdn-icons-png.flaticon.com/128/8888/8888205.png" alt="" class="innerimage" style="width:50px;height:50px;margin-bottom:10px;" />
@@ -103,7 +46,7 @@
                     </button>
 
 
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#pending"
+                    <button type="button" 
                             class="card-button bg-transparent middle-row mx-sm-4 mx-md-4 mx-xxl-5">
                         <div class="middle-row shadow p-3 mx-md-4 mx-xxl-5">
                         <img src="https://cdn-icons-png.flaticon.com/128/7887/7887122.png" alt="" class="innerimage" style="width:50px;height:50px;margin-bottom:10px;" /><br />
@@ -113,7 +56,7 @@
                     </button>
 
 
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#rejected"
+                    <button type="button" 
                             class="card-button bg-transparent middle-row mx-sm-4 mx-md-4 mx-xxl-5">
                         <div class="middle-row shadow p-3 mx-md-4 mx-xxl-5">
                         <img src="https://cdn-icons-png.flaticon.com/128/5978/5978441.png" alt="" class="innerimage" style="width:50px;height:50px;margin-bottom: 10px;"/><br />
@@ -126,7 +69,7 @@
 </div>
         <center class="justify-content-center">
             <a class="btn btn-dark btn-lg me-3 mt-3" asp-controller="Employee" asp-action="BookingSeat" style="font-size:x-large">Book a Seat</a>
-            <a class="btn btn-dark btn-lg mt-3" asp-controller="Employee" asp-action="BookingRoom" style="font-size:x-large">Book a Room</a>
+            <a class="btn btn-dark btn-lg mt-3" asp-controller="Employee" asp-action="BookingRooms" style="font-size:x-large">Book a Room</a>
        </center>
 </div>
     

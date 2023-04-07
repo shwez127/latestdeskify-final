@@ -1,75 +1,57 @@
 ﻿
 @{
-    ViewData["Title"] = "UserRoomBookHistory";
-}
-
-<h1>UserRoomBookHistory</h1>
-
-@{
     Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
 }
 
 @model DeskEntity.Model.BookingRoom
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta name="viewport" content="width-device-width" />
-    </head>
-    <body style="background-color:#F0F8FF">
+<html>
+<body style="background:-webkit-linear-gradient(left, #fff, #000)">
+    <section class="vh-70 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Success</h3>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card col-8 p-1 mb-3 mx-auto" style="width: max-content;width: 100%;background-color: #fff;box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;border-radius: 20px;overflow: hidden;">
+                                        <div class="card-body">
+                                            <h6><img src="~/img/calender.png" alt="" width="20px">&nbsp;&nbsp;From Date : @Model.FromDate.ToShortDateString()</h6>
+                                            <h6><img src="~/img/calender.png" alt="" width="20px">&nbsp;&nbsp;To Date : @Model.ToDate.ToShortDateString()</h6>
+                                            <h6><img src="~/img/clock.png" alt="" width="20px">&nbsp;&nbsp;Meeting Duration : @Model.MeetingHours</h6>
+                                            <h6><img src="~/img/room.svg" alt="" width="20px">&nbsp;&nbsp;Booked Room : @Model.Room.RoomNumber</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card col-8 p-1 mb-3 mx-auto" style="width: 100%;background-color: #fff;box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;border-radius: 20px;overflow: hidden;">
+                                        <div class="card-body">
+                                            <h6><img src="~/img/location.png" alt="" width="20px">&nbsp;&nbsp;Branch Name : BANGALORE</h6>
+                                            <h6><img src="~/img/building.png" alt="" width="20px">&nbsp;&nbsp;Building Name : Jp Nagar</h6>
+                                        </div>
+                                    </div>
+                                    <div class="text-center" style="margin-top:55px">
 
-        <br />
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <a class="text-uppercase d-inline-block text-center" style="color:#003399;font-size:x-large" align="center"> Room Booked <span class="font-weight-bold" style="font-size:x-large">Details</span></a>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="example" width="100%" cellspacing="0">
-                        <thead>
-                            <tr>
-                                <th>BookingRoom Id</th>
-                                <th>Employee Name</th>
-                                <th>Employee Phone</th>
-                                <th>Employee Role</th>
-                                <th>FromDate</th>
-                                <th>ToDate</th>
-                                <th>Room Number</th>
-                                <th>Room Status</th>
-                                <th>Employee Number</th>
-                            
-                            </tr>
-                        </thead>
-                        <tbody>
-                          
-                                    <tr>
-                                        <td>@Model.BookingRoomId</td>
-                                        <td>@Model.Employee.EmployeeName</td>
-                                        <td>@Model.Employee.PhoneNumber</td>
-                                        <td>@Model.Employee.Role</td>
-                                        <td>@Model.FromDate.ToShortDateString()</td>
-                                        <td>@Model.ToDate.ToShortDateString()</td>
-                                        <td>@Model.Room.RoomNumber</td>
-                                        @if (Model.RoomStatus == 1)
-                                        {
-                                            <td>Approved</td>
-                                        }
-                                        else if (Model.RoomStatus == 0)
-                                        {
-                                            <td>Rejected</td>
-                                        }
-                                        else if (Model.RoomStatus == 2)
-                                        {
-                                            <td>Pending</td>
-                                        }
-                                        
+                                        <button class="btn btn-dark btn-lg justify-content-center" onclick="success()">Done</button>
 
-                                        <td>@Model.Employee.EmployeeNumber</td>
-                                          </tr>
-                        </tbody>
-                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </body>
-    </html>
+    </section>
+    <script>
+        function success() {
+            Swal.fire({
+                title: "Success!",
+                text: "Your meeting room is booked successfully!",
+                type: "success"
+            }).then(function () {
+                window.location = "http://localhost:32138/Employee";
+            });
+        }
+    </script>
+</body>
+</html>
