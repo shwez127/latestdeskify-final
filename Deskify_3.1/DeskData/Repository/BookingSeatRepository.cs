@@ -67,6 +67,7 @@ namespace DeskData.Repository
         }
         #endregion GetSeatBookingById
 
+
         #region GetAllBookingSeats
         public IEnumerable<BookingSeat> GetAllBookingSeats()
         {
@@ -74,21 +75,24 @@ namespace DeskData.Repository
         }
         #endregion GetAllBookingSeats
 
-        public BookingSeat GetBookingSeatByEmployeeId(int employeeId)
+       public BookingSeat GetBookingSeatByEmployeeId(int employeeid)
         {
-
-            /*return _db.bookingSeats.Find(bookseatId);*/
+            List<BookingSeat> bookingSeats= new List<BookingSeat>();
             var result = _db.bookingSeats.Include(obj => obj.Employee).Include(obj => obj.Seat).ToList();
             foreach (var bookingSeat in result)
             {
-                if (employeeId == bookingSeat.EmployeeID)
+                if (employeeid == bookingSeat.EmployeeID)
                 {
-                    return bookingSeat;
+                     bookingSeats.Add(bookingSeat);
                 }
             }
-            return null;
-
-
+            return bookingSeats.Last();
         }
     }
-}
+
+
+
+      
+    }
+
+

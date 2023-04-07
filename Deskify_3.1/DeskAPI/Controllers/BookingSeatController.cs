@@ -2,6 +2,7 @@
 using DeskEntity.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -67,10 +68,11 @@ namespace DeskAPI.Controllers
                 return _bookingService.GetSeatBookingById(bookingseatId);
             }
 
-        [HttpGet("GetBookingSeatByEmployeeId")]
-        public BookingSeat GetBookingSeatByEmployeeId(int employeeId)
+            [HttpGet("GetSeatBookingByEmployeeId")]
+            public BookingSeat GetSeatBookingByEmployeeId(int employeeid)
         {
-            return _bookingService.GetBookingSeatByEmployeeId(employeeId);
+            return _bookingService.GetBookingSeatByEmployeeId(employeeid);
         }
-        }
+
+    }
 }

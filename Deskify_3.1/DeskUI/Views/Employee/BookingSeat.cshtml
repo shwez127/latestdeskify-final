@@ -4,6 +4,21 @@
 
 @model DeskEntity.Model.BookingSeat
 
+<br />
+<a asp-area="" asp-controller="Employee" asp-action="Index"><img class="img-fluid" style="height:35px" src="https://www.svgrepo.com/show/358729/navigate-back-circle.svg"></a>
+
+
+@if (Model != null)
+
+{
+    <center>
+
+    <h1>OOps!!You have already booked seat</h1>
+
+    </center>
+}
+else{
+
 <html>
 <body style="background:-webkit-linear-gradient(left, #fff, #000)">
     <section class="vh-70 gradient-custom">
@@ -45,7 +60,7 @@
 
                                         <div class="form-outline w-100">
                                             <label class="form-label">From Date</label>
-                                            <input type="date" asp-for="FromDate" class="form-control form-control-lg"
+                                            <input type="date" asp-for="FromDate" class="form-control form-control-lg" id="fromDate"
                                                    placeholder="From Date" required>
                                         </div>
 
@@ -53,7 +68,7 @@
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
                                             <label class="form-label">To Date</label>
-                                            <input type="date" asp-for="ToDate" class="form-control form-control-lg"
+                                            <input type="date" asp-for="ToDate" class="form-control form-control-lg" id="toDate"
                                                    placeholder="To Date" required>
                                         </div>
 
@@ -79,7 +94,7 @@
                                 <center>
                                     <div class="mt-4 pt-2">
                                         <input type="reset" value="Reset" class="btn btn-outline-secondary btn-lg" />
-                                        <input type="submit" onclick="myFunction()" value="Book Seat" class="btn btn-dark btn-lg" />
+                                        <input type="submit" value="Next" class="btn btn-dark btn-lg" />
                                     </div>
                                 </center>
                                 @if (ViewBag.status == "Ok")
@@ -104,12 +119,15 @@
         </div>
     </section>
     <script>
-        function myFunction() {
-            let val = confirm("Are you sure you want move next?");
-            if (val == false) {
-                return event.preventDefault();
-            }
-        }
+        const today = new Date().toISOString().split('T')[0];
+        const dateFrom = document.getElementById("fromDate");
+        dateFrom.setAttribute("min", today);
+
+        const thisday = new Date().toISOString().split('T')[0];
+        const dateTo = document.getElementById("toDate");
+        dateTo.setAttribute("min", thisday);
+
     </script>
 </body>
 </html>
+}

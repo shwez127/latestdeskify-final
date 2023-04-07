@@ -90,8 +90,8 @@ namespace DeskData.Migrations
                     b.Property<DateTime>("ToDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("bookingrequesttype")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("bookingcount")
+                        .HasColumnType("int");
 
                     b.HasKey("BookingSeatId");
 

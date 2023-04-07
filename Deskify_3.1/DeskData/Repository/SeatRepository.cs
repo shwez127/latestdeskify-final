@@ -53,12 +53,18 @@ namespace DeskData.Repository
         #region GetAllSeats
         public IEnumerable<Seat> GetAllSeats()
         {
+<<<<<<< HEAD
             return _db.seats.Include(obj => obj.Floor).ToList();
+=======
+            return _db.seats.Include(obj=>obj.Floor).ToList();
+>>>>>>> 36400d6a87cdfbe572baf8d1808f2d2a9aa919b2
         }
+
         #endregion GetAllSeats
         public IEnumerable<Seat> GetSeatsByFloorId(int floorId)
         {
             List<Seat> seats = _db.seats.Include(obj => obj.Floor).ToList();
+
             List<Seat>seats1 = new List<Seat>();
 
             foreach (var item in seats)
