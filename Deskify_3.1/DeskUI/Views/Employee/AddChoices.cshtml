@@ -6,7 +6,8 @@
 @{
     ViewData["Title"] = "AddChoices";
 }
-
+<br />
+<br />
 <html>
 <body style="background:-webkit-linear-gradient(left, #fff, #000)">
     <section class="vh-70 gradient-custom">
@@ -21,7 +22,7 @@
                                 <div class="row">
                                     <div class="col-md-12 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label">Would you like to opt for Lunct at Office? (It would help us to arrange the lunch for you)<span style="color:red">*</span></label>
+                                            <label class="form-label">Would you like to opt for Lunch at Office? (It would help us to arrange the lunch for you)<span style="color:red">*</span></label>
                                             <select asp-for="FoodPerferences" asp-items="@ViewBag.choices" class="form-control form-control-lg" required></select>
                                         </div>
 
@@ -32,7 +33,7 @@
                                 <center>
                                     <div class="mt-4 pt-2">
                                         <input type="reset" value="Reset" class="btn btn-outline-secondary btn-lg" />
-                                        <input type="submit" value="Next" class="btn btn-dark btn-lg" />
+                                        <input type="submit" value="Next" class="btn btn-dark btn-lg"/>
                                     </div>
                                 </center>
                                 @if (ViewBag.status == "Ok")
@@ -57,5 +58,6 @@
             </div>
         </div>
     </section>
+
 </body>
 </html>

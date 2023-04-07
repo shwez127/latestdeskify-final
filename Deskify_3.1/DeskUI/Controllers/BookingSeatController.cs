@@ -43,6 +43,7 @@ namespace DeskUI.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> AddBookingSeat(BookingSeat bookseat)
         {
