@@ -1,0 +1,19 @@
+﻿@model DeskEntity.Model.SecretKey;
+
+@{
+    ViewData["Title"] = "GenerateQR";
+}
+
+@{
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+<h1>GenerateQR</h1>
+
+
+@{
+    string imageBase64Data = Convert.ToBase64String(Model.QRCode);
+    string imageDataURL = string.Format("data:image/png;base64,{0}", imageBase64Data);
+
+    <img height="100" width="100" src="@imageDataURL" />
+}
