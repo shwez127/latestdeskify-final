@@ -68,6 +68,9 @@ namespace DeskAPI
             services.AddTransient<ChoicesService, ChoicesService>();
             services.AddTransient<IChoicesRepository, ChoicesRepository>();
 
+            services.AddTransient<SecretKeyservice, SecretKeyservice>();
+            services.AddTransient<ISecretKeyRepository, SecretKeyRepository>();
+
             //LOGGER CODE START
             #region LOGGER 
             var Logger = new LoggerConfiguration()

@@ -435,10 +435,10 @@ namespace DeskUI.Controllers
 
         }
 
-		#endregion
+        #endregion
 
-		#region Employee Crud
-		public IActionResult AddEmployee()
+        #region Employee Crud
+        public IActionResult AddEmployee()
         {
             return View();
 
@@ -659,10 +659,11 @@ namespace DeskUI.Controllers
             #endregion
         }
 
-		#endregion
 
-		#region View Records
-		public IActionResult ViewRecords()
+        #endregion
+
+        #region View Records
+        public IActionResult ViewRecords()
         {
             return View();
         }
@@ -696,6 +697,7 @@ namespace DeskUI.Controllers
         }
 
 
+
         [HttpPost]
         public IActionResult Search(int Employeenumber)
         {
@@ -727,10 +729,115 @@ namespace DeskUI.Controllers
 
         }
 
-		#endregion
+        #endregion
 
-	}
+        public IActionResult ScanQR()
+        {
+            return View();
+        }
+
+        public IActionResult DisplaySecretKey()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DisplaySecretKey(SecretKey secretKey)
+        {
+            TempData["SecretKeyEmployeeId"] = Convert.ToInt32(secretKey.EmployeeID);
+            TempData.Keep();
+            return RedirectToAction("ShowSecretKeyByEmployeeId", "Admin");
+            //return View();
+        }
+        public async Task<IActionResult> ShowSecretKeyByEmployeeId()
+        {
+            int employeeId = Convert.ToInt32(TempData["SecretKeyEmployeeId"]);
+            SecretKey secretKey = null;
+            using (HttpClient client = new HttpClient())
+            {
+                string endPoint = _configuration["WebApiBaseUrl"] + "SecretKey/GetSecretKeyByEmployeeId?employeeId=" + employeeId;
+                ;
+                using (var response = await client.GetAsync(endPoint))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        var result = await response.Content.ReadAsStringAsync();
+                        secretKey = JsonConvert.DeserializeObject<SecretKey>(result);
+                    }
+                }
+            }
+            return View(secretKey);
+        }
+
+
+
+        public async Task<IActionResult> GetEmployeeIdBySecretId(string myContent)
+        {
+
+            int EmployeeIdScanned = 0;
+            using (HttpClient client = new HttpClient())
+            {
+                string endPoint = _configuration["WebApiBaseUrl"] + "SecretKey/GetEmployeeIdBySecretKey?secretKeyType=" + myContent;
+                using (var response = await client.GetAsync(endPoint))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        var result = await response.Content.ReadAsStringAsync();
+                        EmployeeIdScanned = JsonConvert.DeserializeObject<int>(result);
+                    }
+                }
+            }
+
+
+
+            BookingSeat bookingSeat = new BookingSeat();
+            using (HttpClient client = new HttpClient())
+            {
+                string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/GetBookingSeatByEmployeeId?employeeId=" + EmployeeIdScanned;
+                //EmployeeId is api controller passing argument name
+                using (var response = await client.GetAsync(endPoint))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {   //dynamic viewbag we can create any variable name in run time
+                        var result = await response.Content.ReadAsStringAsync();
+                        bookingSeat = JsonConvert.DeserializeObject<BookingSeat>(result);
+                    }
+                }
+            }
+
+
+
+            bookingSeat.SeatStatus = 1;
+
+
+
+            using (HttpClient client = new HttpClient())
+            {
+                StringContent content = new StringContent(JsonConvert.SerializeObject(bookingSeat), Encoding.UTF8, "application/json");
+                string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/UpdateSeatBooking";
+                using (var response = await client.PutAsync(endPoint, content))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {   //dynamic viewbag we can create any variable name in run time
+                        ViewBag.status = "Ok";
+                        ViewBag.message = "Booking Seat Verified Successfully!!";
+                    }
+                    else
+                    {
+                        ViewBag.status = "Error";
+                        ViewBag.message = "Not Able To Verify";
+                    }
+
+
+
+                }
+            }
+            return View();
+        }
+
+    }
 }
+
 
 
         

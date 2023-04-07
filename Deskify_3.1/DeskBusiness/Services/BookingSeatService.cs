@@ -49,6 +49,7 @@ namespace DeskBusiness.Services
         public IEnumerable<BookingSeat> GetBookingsByDate(DateTime date1)
         {
             return _bookseatRepository.GetBookingsByDate(date1);
+
         }
     }
 }

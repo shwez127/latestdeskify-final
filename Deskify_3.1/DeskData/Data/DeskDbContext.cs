@@ -34,7 +34,6 @@ namespace DeskData.Data
         {
 
 
-
            dbContextOptionsBuilder.UseSqlServer("Data Source=DESKTOP-KQRUD27\\SQLEXPRESS;Initial Catalog=deskdb506; Integrated Security=true; ");
 
 

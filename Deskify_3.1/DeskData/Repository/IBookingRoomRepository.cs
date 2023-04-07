@@ -16,5 +16,6 @@ namespace DeskData.Repository
 
         BookingRoom GetBookingRoomById(int bookingRoomId);
         IEnumerable<BookingRoom> GetBookingRoom();
+        BookingRoom GetBookingRoomByEmployeeId(int employeeId);
     }
 }

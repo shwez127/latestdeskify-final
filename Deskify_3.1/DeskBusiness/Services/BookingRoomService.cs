@@ -40,6 +40,11 @@ namespace DeskBusiness.Services
         {
             return _roomRepository.GetBookingRoom();
         }
+        public BookingRoom GetBookingRoomByEmployeeId(int employeeid)
+        {
+            return _roomRepository.GetBookingRoomByEmployeeId(employeeid);
+        }
+
 
     }
 }

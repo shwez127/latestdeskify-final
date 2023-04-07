@@ -53,13 +53,13 @@ namespace DeskData.Repository
         #region GetAllRooms
         public IEnumerable<Room> GetAllRooms()
         {
-            return _db.rooms.ToList();
+            return _db.rooms.Include(obj => obj.Floor).ToList();
         }
         #endregion GetAllRooms
 
         public IEnumerable<Room> GetSeatsByFloorId1(int floorId)
         {
-            List<Room> rooms = _db.rooms.ToList();
+            List<Room> rooms = _db.rooms.Include(obj => obj.Floor).ToList();
             List<Room> rooms1 = new List<Room>();
 
             foreach (var item in rooms)

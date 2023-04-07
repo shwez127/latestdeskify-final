@@ -1,91 +1,105 @@
 ﻿
-
-<h1>GetSeatsByFloorId1</h1>
-
 @{
     Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
 }
-
-
-
-<div>
-    <a asp-controller="BookingRoom" asp-action="Index">Booking Room</a>
-
-</div>
 
 
 @model IEnumerable<DeskEntity.Model.Room>
 @*//this name should be the name of projects under dependencies after adding referrences in MvcUi*@
 
 
-<body>
-
-    <div class="container">
-        <center>
-            <h2 class="text-light text-center">Select Your Room</h2>
-            <div class=" row">
-                @{
-                    int c = 0;
-
-                    @foreach (var item in Model)
-                    {
+<br />
+<a asp-area="" asp-controller="Employee" asp-action="BookingRooms"><img class="img-fluid" style="height:35px" src="https://www.svgrepo.com/show/358729/navigate-back-circle.svg"></a>
 
 
-                        @if (item.RStatus == false)
-                        {
-
-
-                            <div class="col-2">
-                                <div>
-                                    <a asp-controller="Employee" asp-action="GetSeatsByFloorId1" asp-route-RoomId="@item.RoomId" value="room" class="btn">
-                                        Room Num:@item.RoomNumber
-                                        <svg width="70" height="70" style="border-radius:50%">
-                                            <rect x="5" y="5" rx="5" ry="5" width="50" height="50"
-                                                  style="fill:green;stroke:black;stroke-width:5;opacity:0.5" />
-                                        </svg>
-                                    </a>
-
-
-                                    @if (c == 12)
+<html>
+<head>
+    <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
+</head>
+<body style="background:-webkit-linear-gradient(left, #fff, #000)">
+    <section class="vh-70 gradient-custom">
+        <div class="container-fluid py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body ">
+                            <span class="mb-4 pb-2 pb-md-0 mb-md-5">
+                                <h3 style="margin-bottom:20px">
+                                    Meeting Room Booking
+                                    @foreach (var item1 in Model)
                                     {
-                                        c = 0;
-                                        <div class="row">
-                                            <div class="col-1">
-                                                <svg width="400" height="50">
-                                                    <rect x="5" y="5" rx="5" ry="5" width="400" height="30"
-                                                          style="fill:blue;stroke:black;stroke-width:5;opacity:0.8" />
-                                                </svg>
-                                            </div>
-                                        </div>
+                                        <div style="width:300px;border-radius:20px;background-color:silver;margin-left:300px;font-size:20px;padding:6px" class="d-inline">@item1.Floor.FloorName</div>
+                                        break;
                                     }
 
-                                </div>
+                                </h3>              
+                            </span>
+                            <div class="row row-cols-md-12 row-cols-sm-4 row-cols-4">
+                                @{
+                                    int c = 0;
+                                    @foreach (var item in Model)
+                                    {
+                                        @if (item.RStatus == false)
+                                        {
+                                            <div class="col-4 col-sm-4 col-md-4  p-2 mb-3" style="display:flex;justify-content:center">
+                                                <div>
+                                                    <a onclick="myfunction()" asp-controller="Employee" asp-action="GetSeatsByFloorId1" asp-route-RoomId="@item.RoomId" style="text-decoration:none;color:black">
 
-
+                                                        <img src="~/img/room-vacant.svg" style="height:130px;width:130px"></img>
+                                                        <center>@item.RoomNumber</center>
+                                                    </a>
+                                                    @if (c == 12)
+                                                    {
+                                                        c = 0;
+                                                        <div class="row">                                                        
+                                                            <div class="col-1">
+                                                                <svg width="400" height="50">
+                                                                    <rect x="5" y="5" rx="5" ry="5" width="400" height="30"
+                                                                          style="fill:blue;stroke:black;stroke-width:5;opacity:0.8" />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="col-4 col-sm-4 col-md-4  p-2 mb-3" style="display:flex;justify-content:center">
+                                                <a style="pointer-events:none;text-decoration:none">
+                                                    <img src="~/img/room-occupied.svg" style="height:130px;width:130px"></img>
+                                                        <center>@item.RoomNumber</center>
+                                                    </a>
+                                                </div>
+                                        }
+                                    }
+                                }
                             </div>
-
-                        }
-                        else
-                        {
-                            <div>
-
-                                Room Num:@item.RoomNumber<svg width="40" height="50">
-                                    <rect x="5" y="5" rx="5" ry="5" width="30" height="30"
-                                          style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
-
-
-                                </svg>
-
+                            <div class="row text-center">
+                                <div class="card col-2 offset-10 p-2 shadow-lg">
+                                    <img src="~/img/room-vacant.svg" style="height:50px;width:50px" class="mx-auto"></img>
+                                    <span class="font-weight-bold mb-3">Available</span>
+                                    <img src="~/img/room-occupied.svg" style="height:50px;width:50px" class="mx-auto"></img>
+                                    <span class="font-weight-bold">Occupied</span>
+                               </div>
                             </div>
-                        }
-                    }
-
-                }
+                        </div>
+                    </div>
+                  </div>
             </div>
-            <div>
-                <br />
-            </div>
-        </center>
-    </div>
-
+         </div>
+</section>
+    <script>
+        function myfunction() {
+            let val = confirm("Are you sure you want to choose this Meeting Room?");
+            if (val == false) {
+                return event.preventDefault();
+            }
+        }
+    </script>
 </body>
+</html>
