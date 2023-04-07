@@ -46,6 +46,7 @@ namespace DeskData.Repository
         #region GetSeatsById 
         public Seat GetSeatsById(int seatId)
         {
+            var result= _db.seats.Include(obj => obj.Floor).ToList();
             return _db.seats.Find(seatId);
         }
         #endregion GetSeatsById
@@ -53,11 +54,9 @@ namespace DeskData.Repository
         #region GetAllSeats
         public IEnumerable<Seat> GetAllSeats()
         {
-<<<<<<< HEAD
+
             return _db.seats.Include(obj => obj.Floor).ToList();
-=======
-            return _db.seats.Include(obj=>obj.Floor).ToList();
->>>>>>> 36400d6a87cdfbe572baf8d1808f2d2a9aa919b2
+
         }
 
         #endregion GetAllSeats

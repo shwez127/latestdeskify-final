@@ -1,0 +1,180 @@
+﻿@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+	ViewData["Title"] = "Dashboard";
+}
+
+@model DeskEntity.Model.BookingSeat
+
+<style>
+	.bnav,
+	.bnav:after,
+	.bnav:before {
+		background: #ffffff;
+		border-radius: 1px;
+		content: "";
+		cursor: pointer;
+		display: block;
+		height: 3px;
+		transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+		width: 24px;
+	}
+
+	.bnav {
+		position: relative;
+	}
+
+		.bnav:before {
+			position: absolute;
+			top: -7.5px;
+			width: 24px;
+		}
+
+		.bnav:after {
+			bottom: -7.5px;
+			position: absolute;
+			width: 16px;
+		}
+
+	.bnav-right,
+	.bnav-right:after,
+	.bnav-right:before {
+		right: 0;
+	}
+
+	#logout_sidebar_button {
+		position: absolute;
+		display: inline-block;
+		bottom: 0;
+	}
+
+		#logout_sidebar_button:hover {
+			color: red;
+		}
+
+	.card {
+		width: 300px;
+		/*height: 200px;*/
+		background-color: #fff;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+		.card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+	.card-content {
+		padding: 20px;
+	}
+
+	.card-title {
+
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.card-description {
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 5px;
+	}
+
+	.card-button {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 5px;
+	}
+
+		.card-button:hover {
+			background-color: #615f5f;
+			color: #fff;
+		}
+
+	.card-btn {
+		font-family: 'Roboto','sans-serif';
+		background-color: #ffffff00;
+		font-size: 24px;
+		color: #fff;
+		text-decoration: none;
+	}
+
+</style>
+
+<body style="background: -webkit-linear-gradient(left, #fff, #000);">
+	<div>
+		<div id="mySidebar" class="sidebar">
+			<a class="closebtn" onclick="closeNav()"><img width="30px" height="30px" src="~/img/close.png" /></a>
+			<h3 id="stitle" class="text-white " style="font-size: 30px;margin-left: 53px;">
+				Admin
+			</h3>
+			<a asp-controller="Admin" asp-action="Index">Dashboard</a>
+			<a asp-controller="Admin" asp-action="GetAllBookingSeats">Seat Booked</a>
+
+			<a asp-controller="Home" asp-action="Index" id="logout_sidebar_button" class="nav nav-sidebar">Log Out</a>
+		</div>
+	</div>
+
+	<h1 class="text-center text-white my-4"> Records</h1>
+
+	<div class="card col-6 col-sm-4 col-md-4 col-lg-4 my-4 mx-auto ">
+		<div class="card-content text-center" style="display:grid;justify-content:center">
+			<form method="post">
+				<label for="id">Enter Employee number:</label>
+				<input type="number" id="Employeenumber" name="Employeenumber" value="@Model" />
+				<button asp-controller="Admin" asp-action="Search" type="submit" class="card-button mt-4">Search</button>
+			</form>
+		</div>
+	</div>
+	<form method="post">
+		<div class="row text-center">
+			<div class="card col-md-6 col-sm-6 mx-auto p-3" style="display:grid;justify-content:center">
+				<div class="card mb-3">
+					<div class="card-content">
+						<div class="form-group">
+							<label for="From Date">From Date</label>
+							<input type="date" asp-for="FromDate" class="form-control" placeholder="Select the From Date" required />
+						</div>
+						@*<h2 class="card-title">From Date</h2>
+						<label for="date-picker"></label>
+						<input type="date" id="date-picker fdate" value="">*@
+						<p class="card-description"></p>
+					</div>
+				</div>
+
+				<div class="card mb-4">
+					<div class="card-content">
+						<div class="form-group">
+							<label for="To date">To date</label>
+							<input type="date" asp-for="ToDate" class="form-control" placeholder="Select the To Date" required />
+						</div>
+						
+						@*<h2 class="card-title">To Date</h2>
+						<label for="date-picker"></label>
+						<input type="date" id="date-picker tdate" value="">*@
+						<p class="card-description"></p>
+					</div>
+				</div>
+				<button asp-controller="Report" asp-action="GetCustomDates" type="submit" class="card-button">Submit</button>
+			</div>
+					
+		</div>
+	</form>
+
+	<div class="card col-6 col-sm-4 col-md-4 col-lg-4 my-4 mx-auto">
+		<div class="card-content">
+			<a asp-controller="Admin" asp-action="AddSeats" class="card-button">Add seat for employee</a>
+		</div>
+	</div>
+</body>

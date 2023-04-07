@@ -1,7 +1,199 @@
-﻿
-@{
-    ViewData["Title"] = "AddFloors";
+﻿@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>AddFloors</h1>
+@{
+	ViewData["Title"] = "Add Floors";
+}
+
+@model DeskEntity.Model.Floor
+
+<style>
+	.bnav,
+	.bnav:after,
+	.bnav:before {
+		background: #ffffff;
+		border-radius: 1px;
+		content: "";
+		cursor: pointer;
+		display: block;
+		height: 3px;
+		transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+		width: 24px;
+	}
+
+	.bnav {
+		position: relative;
+	}
+
+		.bnav:before {
+			position: absolute;
+			top: -7.5px;
+			width: 24px;
+		}
+
+		.bnav:after {
+			bottom: -7.5px;
+			position: absolute;
+			width: 16px;
+		}
+
+	.bnav-right,
+	.bnav-right:after,
+	.bnav-right:before {
+		right: 0;
+	}
+
+	#logout_sidebar_button {
+		position: absolute;
+		display: inline-block;
+		bottom: 0;
+	}
+
+		#logout_sidebar_button:hover {
+			color: red;
+		}
+
+	.card {
+		width: 300px;
+		/*height: 200px;*/
+		background-color: #fff;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+		.card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+	.card-content {
+		padding: 20px;
+	}
+
+	.card-title {
+		
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.card-description {
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 5px;
+	}
+
+	.card-button {
+		
+		display: block;
+		width: 100%;
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 5px;
+	}
+
+		.card-button:hover {
+			background-color: #615f5f;
+			color: #fff;
+		}
+
+	.card-btn {
+		font-family: 'Roboto','sans-serif';
+		background-color: #ffffff00;
+		font-size: 24px;
+		color: #fff;
+		text-decoration: none;
+	}
+
+</style>
+
+<html>
+<body style="background: -webkit-linear-gradient(left, #fff, #000);">
+	<div>
+		<div id="mySidebar" class="sidebar">
+			<a class="closebtn" onclick="closeNav()"><img width="30px" height="30px" src="~/img/close.png" /></a>
+			<h3 id="stitle" class="text-white " style="font-size: 30px;margin-left: 53px;">
+				Admin
+			</h3>
+			<a asp-controller="Admin" asp-action="Index">Dashboard</a>
+			<a asp-controller="Home" asp-action="Index" id="logout_sidebar_button" class="nav nav-sidebar">Log Out</a>
+		</div>
+	</div>
+
+	
+
+	<section class="vh-70 gradient-custom">
+		<div class="container py-5 h-100">
+			<div class="row justify-content-center align-items-center h-100">
+				<div class="col-12 col-lg-9 col-xl-7">
+					<div class="card mx-auto shadow-2-strong card-registration" style="border-radius: 15px;">
+						<div class="card-body p-3">
+							<h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Add a Floor</h3>
+							<form method="post" enctype="multipart/form-data">
+
+								<div class="row">
+									<div class="col-md-6 mb-4">
+
+										<div class="form-outline">
+											<label class="form-label">Floor ID</label>
+											<input type="text" asp-for="FloorId" class="form-control form-control-lg" placeholder="Floor Id" disabled />
+										</div>
+
+									</div>
+									<div class="col-md-6 mb-4">
+
+										<div class="form-outline">
+											<label class="form-label">Floor Name</label>
+											<input type="text" asp-for="FloorName" class="form-control form-control-lg" placeholder="Floor Name" required />
+										</div>
+
+									</div>
+								</div>
+								<center>
+									<div class="mt-4 pt-2">
+										<input type="reset" value="Reset" class="btn btn-outline-secondary btn-lg" />
+										<input type="submit" onclick="addFunction()" value="Submit" class="btn btn-dark btn-lg" />
+									</div>
+								</center>
+								@if (ViewBag.status == "Ok")
+								{
+									<br />
+									<div class="alert alert-success">
+										@ViewBag.message
+									</div>
+								}
+								else if (ViewBag.status == "Error")
+								{
+									<br />
+									<div class="alert alert-danger">
+										@ViewBag.message
+									</div>
+								}
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-center">
+				<a asp-controller="Admin" asp-action="AllFloors" class="btn btn-secondary mt-4">Return to All Floors</a>
+			</div>
+		</div>
+	</section>
+	<script>
+		function addFunction() {
+			let val = confirm("Are you sure you want to add a new Floor?");
+			if (val == false) {
+				return event.preventDefault();
+			}
+			alert("Your Floor is Added!");
+		}
+	</script>
+</body>
+</html>
 

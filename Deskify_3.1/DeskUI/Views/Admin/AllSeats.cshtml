@@ -1,0 +1,174 @@
+﻿@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+	ViewData["Title"] = "All Seats";
+}
+
+@model IEnumerable<DeskEntity.Model.Seat>
+
+<style>
+	.bnav,
+	.bnav:after,
+	.bnav:before {
+		background: #ffffff;
+		border-radius: 1px;
+		content: "";
+		cursor: pointer;
+		display: block;
+		height: 3px;
+		transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+		width: 24px;
+	}
+
+	.bnav {
+		position: relative;
+	}
+
+		.bnav:before {
+			position: absolute;
+			top: -7.5px;
+			width: 24px;
+		}
+
+		.bnav:after {
+			bottom: -7.5px;
+			position: absolute;
+			width: 16px;
+		}
+
+	.bnav-right,
+	.bnav-right:after,
+	.bnav-right:before {
+		right: 0;
+	}
+
+	#logout_sidebar_button {
+		position: absolute;
+		display: inline-block;
+		bottom: 0;
+	}
+
+		#logout_sidebar_button:hover {
+			color: red;
+		}
+
+	.card {
+		width: 300px;
+		/*height: 200px;*/
+		background-color: #fff;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+		.card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+	.card-content {
+		padding: 20px;
+	}
+
+	.card-title {
+		
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.card-description {
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 5px;
+	}
+
+	.card-button {
+		
+		display: block;
+		width: 100%;
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 5px;
+	}
+
+		.card-button:hover {
+			background-color: #615f5f;
+			color: #fff;
+		}
+
+	.card-btn {
+		font-family: 'Roboto','sans-serif';
+		background-color: #ffffff00;
+		font-size: 24px;
+		color: #fff;
+		text-decoration: none;
+	}
+
+</style>
+
+<body style="background: -webkit-linear-gradient(left, #fff, #000);">
+	<div>
+		<div id="mySidebar" class="sidebar">
+            <a class="closebtn" onclick="closeNav()"><img width="30px" height="30px" src="~/img/close.png" /></a>
+			<h3 id="stitle" class="text-white " style="font-size: 30px;margin-left: 53px;">
+				Admin
+			</h3>
+			<a asp-controller="Admin" asp-action="Index">Dashboard</a>
+
+			<a asp-controller="Home" asp-action="Index" id="logout_sidebar_button" class="nav nav-sidebar">Log Out</a>
+		</div>
+	</div>
+
+	<h1 class="text-center text-white my-4"> All Seat Details</h1>
+
+	
+
+	<div class="row">
+		<div class="col-12 ">
+			
+			<hr />
+			<div class="table-responsive">
+			<table class="table table-light table-striped table-bordered border-dark table-hover">
+				<thead>
+					<tr>
+						<th>SeatId</th>
+						<th>Seat Number</th>
+						<th>Seat Status</th>
+						<th>FloorId</th>
+
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var seat in Model)
+					{
+						<tr>
+
+							<td>@seat.SeatId</td>
+							<td>@seat.SeatNumber</td>
+							<td>@seat.Status</td>
+							<td>@seat.FloorId</td>
+
+                                <td><a asp-controller="Admin" asp-action="EditSeats" asp-route-SeatId=@seat.SeatId><img width="25px" height="25px" src="~/img/edit.svg" /></a></td>
+								<td><a asp-controller="Admin" asp-action="DeleteSeats" asp-route-SeatId=@seat.SeatId> <img width="25px" height="25px" src="~/img/delete.svg" /></a></td>
+							</tr>
+					}
+			</table>
+			</div>
+			<div>
+				<a asp-controller="Admin" asp-action="AddSeats" class="btn btn-secondary">Add New Seat</a>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+

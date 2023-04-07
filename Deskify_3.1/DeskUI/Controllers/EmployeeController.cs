@@ -765,16 +765,6 @@ namespace DeskUI.Controllers
 
         }
 
-<<<<<<< HEAD
-        
-        
-=======
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 36400d6a87cdfbe572baf8d1808f2d2a9aa919b2
->>>>>>> 48f500cc422a8e80d3c49be586f9ef75850d16ad
         [HttpGet]
         public async Task<IActionResult> BookingRoomHistory()
         {
