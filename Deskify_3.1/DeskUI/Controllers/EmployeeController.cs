@@ -10,11 +10,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Net.Http;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using ZXing;
 
 namespace DeskUI.Controllers
 {
@@ -312,9 +314,7 @@ namespace DeskUI.Controllers
         
         [HttpPost]
         public async Task<IActionResult> BookingSeat(BookingSeat bookingSeat)
-        {   
-
-          
+        {    
             bookingSeat.EmployeeID = Convert.ToInt32(TempData["EmployeeID"]);
             TempData.Keep();
             bookingSeat.SeatId = 2;
@@ -468,15 +468,6 @@ namespace DeskUI.Controllers
                     }
                 }
                 List<SelectListItem> seats1 = new List<SelectListItem>();
-
-                /*  //fetching the seats and adding to the Viewbag for booking seat
-                  seats1.Add(new SelectListItem { Value = "1", Text = "Select Seat" });
-                  foreach (var item in seats)
-                  {
-                      seats1.Add(new SelectListItem { Value = item.SeatId.ToString(), Text = item.SeatNumber });
-                  }
-
-                  ViewBag.seatlist = seats1;*/
                 return View(seats);
 
             }
@@ -807,7 +798,12 @@ namespace DeskUI.Controllers
 
         }
 
+<<<<<<< HEAD
+        
+        
+=======
 
+>>>>>>> 36400d6a87cdfbe572baf8d1808f2d2a9aa919b2
         [HttpGet]
         public async Task<IActionResult> BookingRoomHistory()
         {
@@ -1088,6 +1084,102 @@ namespace DeskUI.Controllers
             return View(Choicesresult);
         }
 
+        public async Task<IActionResult> GenerateQR()
+        {
+            #region Generating Displaying QR
+           
+            Random rnd = new Random();
+            int length = 5;
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            var result2 = new StringBuilder(length);
+            for (int i = 0; i < length; i++)
+            {
+                result2.Append(chars[rnd.Next(chars.Length)]);
+            }
+            string randomNum = result2.ToString();
+            int employeeId = Convert.ToInt32(TempData["EmployeeID"]);
+            TempData.Keep();
+            SecretKey secretKey = new SecretKey();
+            secretKey.SecretKeyType = randomNum.ToString();
+            secretKey.EmployeeID = employeeId;
+            BarcodeWriter barcodeWriter = new BarcodeWriter();
+            barcodeWriter.Format = BarcodeFormat.QR_CODE;
+            var bitmap = barcodeWriter.Write(secretKey.SecretKeyType);
+            using (MemoryStream ms = new MemoryStream())
+            {
+                bitmap.Save(ms, ImageFormat.Bmp);
+                secretKey.QRCode = ms.ToArray();
+            }
+            using (HttpClient client = new HttpClient())
+            {
+                StringContent content = new StringContent(JsonConvert.SerializeObject(secretKey), Encoding.UTF8, "application/json");
+                string endPoint = _configuration["WebApiBaseUrl"] + "SecretKey/AddSecretKey";
+                using (var response = await client.PostAsync(endPoint, content))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        ViewBag.status = "Ok";
+                        ViewBag.message = "Secret key details saved sucessfully!!";
+                    }
+                    else
+                    {
+                        ViewBag.status = "Error";
+                        ViewBag.message = "Wrong entries!";
+                    }
+                }
+            }
+
+            using (HttpClient client = new HttpClient())
+            {
+                string endPoint = _configuration["WebApiBaseUrl"] + "SecretKey/GetSecretKeyByEmployeeId?employeeId=" + employeeId;
+                using (var response = await client.GetAsync(endPoint))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        var result = await response.Content.ReadAsStringAsync();
+                        secretKey = JsonConvert.DeserializeObject<SecretKey>(result);
+                        TempData["SecretIdForQr"] = Convert.ToInt32(secretKey.SecretId);
+                        TempData.Keep();
+                    }
+                }
+            }
+            
+            /*using (HttpClient client = new HttpClient())
+            {
+                StringContent content = new StringContent(JsonConvert.SerializeObject(secretKey), Encoding.UTF8, "application/json");
+                string endPoint = _configuration["WebApiBaseUrl"] + "SecretKey/UpdateSecretKey";
+                using (var response = await client.PutAsync(endPoint, content))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        ViewBag.status = "Ok";
+                        ViewBag.message = "QR Updated Successfully!";
+                    }
+                    else
+                    {
+                        ViewBag.status = "Error";
+                        ViewBag.message = "Wrong Entries!";
+                    }
+                }
+            }*/
+            SecretKey secretKey2 = null;
+            using (HttpClient client = new HttpClient())
+            {
+                string endPoint = _configuration["WebApiBaseUrl"] + "SecretKey/GetSecretKeyById?secretId=" + Convert.ToInt32(TempData["SecretIdForQr"]);
+                TempData.Keep();
+                using (var response = await client.GetAsync(endPoint))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {   //dynamic viewbag we can create any variable name in run time
+                        var result = await response.Content.ReadAsStringAsync();
+                        secretKey2 = JsonConvert.DeserializeObject<SecretKey>(result);
+                    }
+                }
+            }
+            #endregion
+
+            return View(secretKey2);
+        }
 
         public IActionResult Notification()
         {
@@ -1095,6 +1187,5 @@ namespace DeskUI.Controllers
             TempData.Keep();
             return View(bookingSeat1);
         }
-
     }
 }

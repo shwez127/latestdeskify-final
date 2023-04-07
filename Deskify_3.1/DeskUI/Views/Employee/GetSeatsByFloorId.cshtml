@@ -9,13 +9,13 @@
 <a asp-area="" asp-controller="Employee" asp-action="BookingSeat"><img class="img-fluid" style="height:35px" src="https://www.svgrepo.com/show/358729/navigate-back-circle.svg"></a>
 
 <html>
-    <head>
+<head>
     <script type="text/javascript">
         function preventBack() { window.history.forward(); }
         setTimeout("preventBack()", 0);
         window.onunload = function () { null };
     </script>
-    </head>
+</head>
 <body style="background:-webkit-linear-gradient(left, #fff, #000)">
     <section class="vh-70 gradient-custom">
         <div class="container-fluid py-5 h-100">
@@ -26,8 +26,8 @@
                             <span class="mb-4 pb-2 pb-md-0 mb-md-5">
                                 <h3 style="margin-bottom:20px">
                                     Seat Booking
-                                    @foreach(var item1 in Model)
-                                    {
+                                    @foreach (var item1 in Model)
+                                    {
                                         <div style="width:300px;border-radius:20px;background-color:silver;margin-left:415px;font-size:20px;padding:6px" class="d-inline">@item1.Floor.FloorName</div>
                                         break;
                                     }
@@ -43,14 +43,14 @@
                                             <div class="col-1 col-sm-1 col-md-1  p-2 mb-3">
                                                 <div>
                                                     <a onclick="myfunction()" asp-controller="Employee" asp-action="GetSeatsByFloorId" asp-route-SeatId="@item.SeatId" style="text-decoration:none;color:black">
-                                                        
-                                                    <img src="~/img/seat-green.svg" style="height:50px;width:50px"></img>
-                                                        <center >@item.SeatNumber</center>
+
+                                                        <img src="~/img/seat-green.svg" style="height:50px;width:50px"></img>
+                                                        <center>@item.SeatNumber</center>
                                                     </a>
                                                     @if (c == 12)
                                                     {
                                                         c = 0;
-                                                        <div class="row">                                                        
+                                                        <div class="row">
                                                             <div class="col-1">
                                                                 <svg width="400" height="50">
                                                                     <rect x="5" y="5" rx="5" ry="5" width="400" height="30"
@@ -66,10 +66,10 @@
                                         {
                                             <div class="col-1 col-sm-1 col-md-1 p-2">
                                                 <a style="pointer-events:none;text-decoration:none">
-                                                        <img src="~/img/seat-red.svg" style="height:50px;width:50px"></img>
-                                                        <center>@item.SeatNumber</center>
-                                                    </a>
-                                                </div>
+                                                    <img src="~/img/seat-red.svg" style="height:50px;width:50px"></img>
+                                                    <center>@item.SeatNumber</center>
+                                                </a>
+                                            </div>
                                         }
                                     }
                                 }
@@ -80,14 +80,14 @@
                                     <span class="font-weight-bold mb-3">Available</span>
                                     <img src="~/img/seat-red.svg" style="height:40px;width:40px" class="mx-auto"></img>
                                     <span class="font-weight-bold">Occupied</span>
-                               </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
+                </div>
             </div>
-         </div>
-</section>
+        </div>
+    </section>
     <script>
         function myfunction() {
             let val = confirm("Are you sure you want to choose this seat?");

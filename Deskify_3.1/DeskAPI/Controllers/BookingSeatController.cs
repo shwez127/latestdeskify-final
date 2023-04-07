@@ -69,12 +69,9 @@ namespace DeskAPI.Controllers
             }
 
             [HttpGet("GetSeatBookingByEmployeeId")]
-          
-
             public BookingSeat GetSeatBookingByEmployeeId(int employeeid)
         {
             return _bookingService.GetBookingSeatByEmployeeId(employeeid);
-
         }
 
     }

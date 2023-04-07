@@ -40,10 +40,9 @@ namespace DeskBusiness.Services
             return _bookseatRepository.GetAllBookingSeats();
         }
 
-
-       public BookingSeat GetBookingSeatByEmployeeId(int employeeid)
+        public BookingSeat GetBookingSeatByEmployeeId(int employeeId)
         {
-            return _bookseatRepository.GetBookingSeatByEmployeeId(employeeid);
+            return _bookseatRepository.GetBookingSeatByEmployeeId(employeeId);
         }
     }
 }

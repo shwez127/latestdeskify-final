@@ -87,7 +87,6 @@ namespace DeskData.Repository
                 }
             }
             return bookingSeats.Last();
-            
         }
     }
 
