@@ -295,8 +295,11 @@ namespace DeskData.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("BookingSeatId")
+                    b.Property<int>("EmployeeID")
                         .HasColumnType("int");
+
+                    b.Property<byte[]>("QRCode")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("SecretKeyGen")
                         .HasColumnType("nvarchar(max)");
@@ -306,7 +309,7 @@ namespace DeskData.Migrations
 
                     b.HasKey("SecretId");
 
-                    b.HasIndex("BookingSeatId");
+                    b.HasIndex("EmployeeID");
 
                     b.ToTable("secretKeys");
                 });
@@ -417,13 +420,13 @@ namespace DeskData.Migrations
 
             modelBuilder.Entity("DeskEntity.Model.SecretKey", b =>
                 {
-                    b.HasOne("DeskEntity.Model.BookingSeat", "BookingSeat")
+                    b.HasOne("DeskEntity.Model.Employee", "Employee")
                         .WithMany()
-                        .HasForeignKey("BookingSeatId")
+                        .HasForeignKey("EmployeeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("BookingSeat");
+                    b.Navigation("Employee");
                 });
 #pragma warning restore 612, 618
         }

@@ -35,7 +35,15 @@ namespace DeskData.Repository
 
         public Choices GetChoiceById(int choiceId)
         {
-            return _db.choices.Find(choiceId);
+            var result = _db.choices.Include(obj => obj.BookingSeat).ToList();
+            foreach (var choice in result)
+            {
+                if (choiceId == choice.ChoiceId)
+                {
+                    return choice;
+                }
+            }
+            return null;
         }
 
         public void UpdateChoice(Choices choice)

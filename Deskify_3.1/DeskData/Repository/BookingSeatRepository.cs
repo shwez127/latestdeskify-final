@@ -73,5 +73,22 @@ namespace DeskData.Repository
             return _db.bookingSeats;
         }
         #endregion GetAllBookingSeats
+
+        public BookingSeat GetBookingSeatByEmployeeId(int employeeId)
+        {
+
+            /*return _db.bookingSeats.Find(bookseatId);*/
+            var result = _db.bookingSeats.Include(obj => obj.Employee).Include(obj => obj.Seat).ToList();
+            foreach (var bookingSeat in result)
+            {
+                if (employeeId == bookingSeat.EmployeeID)
+                {
+                    return bookingSeat;
+                }
+            }
+            return null;
+
+
+        }
     }
 }

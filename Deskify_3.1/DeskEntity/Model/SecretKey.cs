@@ -15,10 +15,11 @@ namespace DeskEntity.Model
         public string SecretKeyGen { get; set; }
 
         public string SecretKeyType { get; set;}
+        public byte[] QRCode { get; set; }
 
 
-        [ForeignKey("BookingSeat")]
-        public int BookingSeatId { get; set; }
-        public BookingSeat BookingSeat { get; set; }
+        [ForeignKey("Employee")]
+        public int EmployeeID { get; set; }
+        public Employee Employee { get; set; }
     }
 }
