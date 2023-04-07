@@ -71,12 +71,12 @@ namespace DeskData.Repository
         #region GetAllBookingSeats
         public IEnumerable<BookingSeat> GetAllBookingSeats()
         {
-            return _db.bookingSeats;
+            return _db.bookingSeats.Include(obj => obj.Employee).Include(obj => obj.Seat).ToList();
         }
         #endregion GetAllBookingSeats
 
        public BookingSeat GetBookingSeatByEmployeeId(int employeeid)
-        {
+       {
             List<BookingSeat> bookingSeats= new List<BookingSeat>();
             var result = _db.bookingSeats.Include(obj => obj.Employee).Include(obj => obj.Seat).ToList();
             foreach (var bookingSeat in result)
@@ -88,8 +88,30 @@ namespace DeskData.Repository
             }
             return bookingSeats.Last();
             
-        }
-    }
+       }
+
+		public IEnumerable<BookingSeat> GetBookingsByDate(DateTime date1)
+		{
+			List<BookingSeat> booking = _db.bookingSeats.Include(obj => obj.Employee).ToList();
+			List<BookingSeat> booking1 = new List<BookingSeat>();
+			foreach (var item in booking)
+			{
+				if (item.FromDate.Date == item.ToDate.Date && item.FromDate.Date == date1)
+				{
+					booking1.Add(item);
+					continue;
+				}
+				else if ((item.FromDate.Date != item.ToDate.Date) && (item.FromDate.Date >= date1 && date1 <= item.ToDate.Date))
+				{
+					booking1.Add(item);
+				}
+			}
+			return booking1;
+
+
+
+		}
+	}
 
 
 

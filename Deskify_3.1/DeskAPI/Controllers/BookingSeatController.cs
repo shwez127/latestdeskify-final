@@ -72,9 +72,14 @@ namespace DeskAPI.Controllers
           
 
             public BookingSeat GetSeatBookingByEmployeeId(int employeeid)
-        {
+            {
             return _bookingService.GetBookingSeatByEmployeeId(employeeid);
 
+            }
+        [HttpGet("GetBookingsByDate")]
+        public IEnumerable<BookingSeat> GetBookingsByDate(DateTime date1)
+        {
+            return _bookingService.GetBookingsByDate(date1);
         }
 
     }

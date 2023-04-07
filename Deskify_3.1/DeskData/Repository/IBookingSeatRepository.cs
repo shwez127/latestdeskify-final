@@ -13,6 +13,7 @@ namespace DeskData.Repository
         BookingSeat GetSeatBookingById(int bookseatId);
         IEnumerable<BookingSeat> GetAllBookingSeats();
         BookingSeat GetBookingSeatByEmployeeId(int employeeid);
+        IEnumerable<BookingSeat> GetBookingsByDate(DateTime date1);
 
 
     }

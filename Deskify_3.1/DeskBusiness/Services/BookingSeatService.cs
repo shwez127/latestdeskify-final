@@ -42,8 +42,13 @@ namespace DeskBusiness.Services
 
 
        public BookingSeat GetBookingSeatByEmployeeId(int employeeid)
-        {
+       {
             return _bookseatRepository.GetBookingSeatByEmployeeId(employeeid);
+       }
+
+        public IEnumerable<BookingSeat> GetBookingsByDate(DateTime date1)
+        {
+            return _bookseatRepository.GetBookingsByDate(date1);
         }
     }
 }
