@@ -45,8 +45,9 @@ namespace DeskData.Repository
         #region GetRoomsById 
         public Room GetRoomsById(int roomId)
         {
-            return _db.rooms.Find(roomId);
-        }
+			var result = _db.rooms.Include(obj => obj.Floor).ToList();
+			return _db.rooms.Find(roomId);
+		}
         #endregion GetRoomsById
 
         #region GetAllRooms
