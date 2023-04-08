@@ -2,7 +2,7 @@
     Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
 }
 
-@model DeskEntity.Model.Employee;
+@model DeskEntity.Model.BookingSeat;
 
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
   <div class="card-div">
     <div class="card p-2 mt-4">
 
-      <div class="card-title text-center">Hi, @Model.EmployeeName!
+      <div class="card-title text-center">Hi, @Model.Employee.EmployeeName!
         <br>
            <div class="card-title text-center"> Today, @DateTime.Now.ToString("dddd, dd MMMM yyyy")</div>
       </div>
@@ -40,7 +40,14 @@
                             class="card-button bg-transparent  middle-row mx-sm-4 mx-md-4 mx-xxl-5">
                         <div class="middle-row shadow p-3 mx-md-4 mx-xxl-5">
                         <img src="https://cdn-icons-png.flaticon.com/128/8888/8888205.png" alt="" class="innerimage" style="width:50px;height:50px;margin-bottom:10px;" />
-                        <h3 class="mb-0 font-weight-bold">1</h3>
+                         @if(Model.SeatStatus==1)
+                         {
+                            <h3 class="mb-0 font-weight-bold">1</h3>
+                        }
+                        else
+                        {
+                            <h3 class="mb-0 font-weight-bold">0</h3>
+                        }
                         <span class="text-uppercase " style="font-family:Arial">Approved</span>
                         </div>
                     </button>
@@ -50,7 +57,14 @@
                             class="card-button bg-transparent middle-row mx-sm-4 mx-md-4 mx-xxl-5">
                         <div class="middle-row shadow p-3 mx-md-4 mx-xxl-5">
                         <img src="https://cdn-icons-png.flaticon.com/128/7887/7887122.png" alt="" class="innerimage" style="width:50px;height:50px;margin-bottom:10px;" /><br />
-                        <h3 class="mb-0 font-weight-bold">0</h3>
+                        @if (Model.SeatStatus == 3)
+                        {
+                            <h3 class="mb-0 font-weight-bold">1</h3>
+                        }
+                        else
+                        {
+                            <h3 class="mb-0 font-weight-bold">0</h3>
+                        }
                         <span class="text-uppercase " style="font-family:Arial">Pending</span>
                         </div>
                     </button>
@@ -60,7 +74,14 @@
                             class="card-button bg-transparent middle-row mx-sm-4 mx-md-4 mx-xxl-5">
                         <div class="middle-row shadow p-3 mx-md-4 mx-xxl-5">
                         <img src="https://cdn-icons-png.flaticon.com/128/5978/5978441.png" alt="" class="innerimage" style="width:50px;height:50px;margin-bottom: 10px;"/><br />
-                        <h3 class="mb-0 font-weight-bold">0</h3>
+                        @if (Model.SeatStatus == 2)
+                        {
+                            <h3 class="mb-0 font-weight-bold">1</h3>
+                        }
+                        else
+                        {
+                            <h3 class="mb-0 font-weight-bold">0</h3>
+                        }
                         <span class=" text-uppercase" style="font-family:Arial">Rejected</span>
                         </div>
                     </button>
