@@ -1,19 +1,30 @@
 ﻿@model DeskEntity.Model.SecretKey;
 
 @{
-    ViewData["Title"] = "GenerateQR";
-}
-
-@{
     Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
 }
 
-<h1>GenerateQR</h1>
 
+<html>
+<body style="background:-webkit-linear-gradient(left, #fff, #000)">
+    <section class="vh-70 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100 mt-5">
+                <div class="col-6 col-xl-4">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body">
+                            <h3 class=" text-center">Scan Me</h3>
+                            @{
+                                string imageBase64Data = Convert.ToBase64String(Model.QRCode);
+                                string imageDataURL = string.Format("data:image/png;base64,{0}", imageBase64Data);
+                                <div class="text-center">  <img class="img-fluid" height="300" width="300" src="@imageDataURL" /></div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>
 
-@{
-    string imageBase64Data = Convert.ToBase64String(Model.QRCode);
-    string imageDataURL = string.Format("data:image/png;base64,{0}", imageBase64Data);
-
-    <img height="100" width="100" src="@imageDataURL" />
-}

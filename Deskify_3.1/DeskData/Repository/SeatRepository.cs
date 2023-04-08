@@ -54,9 +54,7 @@ namespace DeskData.Repository
         #region GetAllSeats
         public IEnumerable<Seat> GetAllSeats()
         {
-
             return _db.seats.Include(obj => obj.Floor).ToList();
-
         }
 
         #endregion GetAllSeats

@@ -39,20 +39,25 @@ namespace DeskUI.Controllers
             int EmployeeProfileId = Convert.ToInt32(TempData["ProfileID"]);
             TempData.Keep();
 
+
             Employee employee = null;
+            BookingSeat bookingSeat = null;
             using (HttpClient client = new HttpClient())
             {
-                string endpoint = _configuration["WebApiBaseUrl"] + "Employee/GetEmployeeById?employeeId=" + EmployeeProfileId;
+                string endpoint = _configuration["WebApiBaseUrl"] + "BookingSeat/GetSeatBookingByEmployeeId?employeeid=" + EmployeeProfileId;
+            
                 using (var response = await client.GetAsync(endpoint))
                 {
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
                         var result = await response.Content.ReadAsStringAsync();
-                        employee = JsonConvert.DeserializeObject<Employee>(result);
+                        bookingSeat = JsonConvert.DeserializeObject<BookingSeat>(result);
+                        TempData["empName"] = bookingSeat.Employee.EmployeeName;
+                        TempData.Keep();
                     }
                 }
             }
-            return View(employee);
+            return View(bookingSeat);
 
         }
 
@@ -312,14 +317,14 @@ namespace DeskUI.Controllers
             ViewBag.FloorList = floor;
             ViewBag.shiftTimings = ShiftTiming();
             return View();
-            
-    
+
+
         }
 
-        
+
         [HttpPost]
         public async Task<IActionResult> BookingSeat(BookingSeat bookingSeat)
-        {    
+        {
             bookingSeat.EmployeeID = Convert.ToInt32(TempData["EmployeeID"]);
             TempData.Keep();
             bookingSeat.SeatId = 2;
@@ -353,17 +358,17 @@ namespace DeskUI.Controllers
             bookingSeat1 = bookingSeat;
             return RedirectToAction("GetSeatsByFloorId");
         }
-      
+
         public async Task<IActionResult> GetSeatsByFloorId(int SeatId)
         {
-            
-            
-            if(SeatId != 0)
+
+
+            if (SeatId != 0)
             {
-               
+
                 BookingSeat bookingSeat1 = new BookingSeat();
                 Seat seat = new Seat();
-              
+
                 // Availabel and unavailable
 
                 using (HttpClient client = new HttpClient())
@@ -375,7 +380,7 @@ namespace DeskUI.Controllers
                         if (response.StatusCode == System.Net.HttpStatusCode.OK)
                         {   //dynamic viewbag we can create any variable name in run time
                             var result = await response.Content.ReadAsStringAsync();
-                           seat = JsonConvert.DeserializeObject<Seat>(result);
+                            seat = JsonConvert.DeserializeObject<Seat>(result);
                         }
                     }
                 }
@@ -406,9 +411,9 @@ namespace DeskUI.Controllers
 
 
 
-                
+
                 bookingSeat1.SeatStatus = 0;
-               
+
                 using (HttpClient client = new HttpClient())
                 {
                     string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/GetSeatBookingById?bookingseatId=" + Convert.ToInt32(TempData["bookingSeatId"]);
@@ -425,8 +430,8 @@ namespace DeskUI.Controllers
 
                 bookingSeat1.SeatId = SeatId;
                 bookingSeat1.SeatStatus = 1;
-                
- 
+
+
 
 
                 using (HttpClient client = new HttpClient())
@@ -457,7 +462,7 @@ namespace DeskUI.Controllers
                 }
             }
 
-            int floorId =Convert.ToInt32(TempData["floorId"]);
+            int floorId = Convert.ToInt32(TempData["floorId"]);
             List<Seat> seats = new List<Seat>();
 
             using (HttpClient client = new HttpClient())
@@ -484,7 +489,8 @@ namespace DeskUI.Controllers
             BookingSeat seat = new BookingSeat();
             using (HttpClient client = new HttpClient())
             {
-                string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/GetSeatBookingById?bookingseatId=" + BookSeatId;
+                string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/GetSeatBookingByEmployeeId?employeeid=" + Convert.ToInt32(TempData["ProfileID"]);
+                TempData.Keep();
                 using (var response = await client.GetAsync(endPoint))
                 {
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -506,6 +512,12 @@ namespace DeskUI.Controllers
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
                         ViewBag.status = "Ok";
+                        TempData["SeatStatus"] = seat.SeatStatus;
+                        TempData.Keep();
+                        TempData["Count"] = Convert.ToInt32(TempData["Count"]) + 1;
+                        TempData.Keep();
+                        return RedirectToAction("Index", "Employee");
+
                     }
                     else
                     {
@@ -514,11 +526,8 @@ namespace DeskUI.Controllers
                     }
                 }
             }
-            TempData["SeatStatus"] = seat.SeatStatus;
-            TempData.Keep();
-            TempData["Count"] = Convert.ToInt32(TempData["Count"]) + 1;
-            TempData.Keep();
-            return View(seat);
+
+            return View();
 
         }
 
@@ -541,7 +550,7 @@ namespace DeskUI.Controllers
 
                 }
             }
-           
+
             ViewBag.shiftTimings = ShiftTiming();
             return View(seat);
         }
@@ -740,7 +749,7 @@ namespace DeskUI.Controllers
                         }
                     }
 
-                   /* return View();*/
+                    /* return View();*/
                 }
             }
 
@@ -910,14 +919,14 @@ namespace DeskUI.Controllers
         }
 
 
-        
+
 
         public IActionResult ChoicesHealth()
         {
             return View();
         }
 
-        
+
         [HttpGet]
         public async Task<IActionResult> UserSeatBookHstory()
         {
@@ -940,7 +949,7 @@ namespace DeskUI.Controllers
                     }
                 }
             }
-          
+
             return View(bookingSeats);
             #endregion
 
@@ -1000,9 +1009,9 @@ namespace DeskUI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddChoices(Choices choices)
         {
-            
+
             ViewBag.status = "";
-            choices.BookingSeatId=Convert.ToInt32( TempData["bookingSeatId"]);
+            choices.BookingSeatId = Convert.ToInt32(TempData["bookingSeatId"]);
             TempData.Keep();
             using (HttpClient client = new HttpClient())
             {
@@ -1047,8 +1056,8 @@ namespace DeskUI.Controllers
 
         public async Task<IActionResult> GenerateQR()
         {
-            #region Generating Displaying QR
-           
+            #region Generating Displaying QR
+
             Random rnd = new Random();
             int length = 5;
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -1104,25 +1113,7 @@ namespace DeskUI.Controllers
                     }
                 }
             }
-            
-            /*using (HttpClient client = new HttpClient())
-            {
-                StringContent content = new StringContent(JsonConvert.SerializeObject(secretKey), Encoding.UTF8, "application/json");
-                string endPoint = _configuration["WebApiBaseUrl"] + "SecretKey/UpdateSecretKey";
-                using (var response = await client.PutAsync(endPoint, content))
-                {
-                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                    {
-                        ViewBag.status = "Ok";
-                        ViewBag.message = "QR Updated Successfully!";
-                    }
-                    else
-                    {
-                        ViewBag.status = "Error";
-                        ViewBag.message = "Wrong Entries!";
-                    }
-                }
-            }*/
+
             SecretKey secretKey2 = null;
             using (HttpClient client = new HttpClient())
             {
@@ -1142,11 +1133,32 @@ namespace DeskUI.Controllers
             return View(secretKey2);
         }
 
-        public IActionResult Notification()
+        public async Task<IActionResult> Notification()
         {
-            bookingSeat1.SeatStatus = Convert.ToInt32(TempData["SeatStatus"]);
+            int EmployeeProfileId = Convert.ToInt32(TempData["ProfileID"]);
             TempData.Keep();
-            return View(bookingSeat1);
+
+            Employee employee = null;
+            BookingSeat bookingSeat = null;
+            using (HttpClient client = new HttpClient())
+            {
+                string endpoint = _configuration["WebApiBaseUrl"] + "BookingSeat/GetSeatBookingByEmployeeId?employeeid=" + EmployeeProfileId;
+
+                using (var response = await client.GetAsync(endpoint))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        var result = await response.Content.ReadAsStringAsync();
+                        bookingSeat = JsonConvert.DeserializeObject<BookingSeat>(result);
+                        TempData["empName"] = bookingSeat.Employee.EmployeeName;
+                        TempData.Keep();
+                    }
+                }
+            }
+            //return View(bookingSeat);
+            bookingSeat.SeatStatus = Convert.ToInt32(TempData["SeatStatus"]);
+            TempData.Keep();
+            return View(bookingSeat);
         }
 
         public async Task<IActionResult> ViewPassSeat()
@@ -1190,6 +1202,81 @@ namespace DeskUI.Controllers
                 }
             }
             return View(bookingRoom);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> AllBookingSeats()
+        {
+            BookingSeat bookingSeat = new BookingSeat();
+            IEnumerable<BookingSeat> bookingseatresult = null;
+            using (HttpClient client = new HttpClient())
+            {
+                string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/GetAllBookingSeats";
+                using (var response = await client.GetAsync(endPoint))
+                {
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        var result = await response.Content.ReadAsStringAsync();
+                        bookingseatresult = JsonConvert.DeserializeObject<IEnumerable<BookingSeat>>(result);
+                    }
+                }
+            }
+            foreach (var item in bookingseatresult)
+            {
+                if (item.SeatStatus == 1 && (item.FromDate <= DateTime.Today && item.ToDate >= DateTime.Today))
+                {
+                    DateTime dt = DateTime.Today;
+                    dt.ToString("HH:mm");
+                    DateTime p = DateTime.Now;
+                    string l = p.ToString("HH");
+                    if (l == "12")
+                    {
+                        BookingSeat seat = new BookingSeat();
+                        using (HttpClient client = new HttpClient())
+                        {
+                            string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/GetSeatBookingById?bookingseatId=" + item.BookingSeatId;
+                            using (var response = await client.GetAsync(endPoint))
+                            {
+                                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                                {
+                                    var result = await response.Content.ReadAsStringAsync();
+                                    seat = JsonConvert.DeserializeObject<BookingSeat>(result);
+                                }
+                            }
+                        }
+                        //Update booking
+                        seat.SeatStatus = 3;
+                        using (HttpClient client = new HttpClient())
+                        {
+                            StringContent content = new StringContent(JsonConvert.SerializeObject(seat), Encoding.UTF8, "application/json");
+                            string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/UpdateSeatBooking";
+                            using (var response = await client.PutAsync(endPoint, content))
+                            {
+                                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                                {
+                                    ViewBag.status = "Ok";
+                                    TempData["SeatStatus"] = seat.SeatStatus;
+                                    TempData.Keep();
+                                    TempData["Count"] = Convert.ToInt32(TempData["Count"]) + 1;
+                                    TempData.Keep();
+                                    return RedirectToAction("Index", "BookingRoom");
+                                }
+                                else
+                                {
+                                    ViewBag.status = "Error";
+                                    ViewBag.message = "Wrong Entries";
+                                }
+                            }
+                        }
+
+                    }
+
+
+                }
+
+            }
+            return View();
+
         }
     }
 }

@@ -9,13 +9,44 @@
 
 
 @if (Model != null)
-
 {
-    <center>
+<html>
+  <head>
+        <style>
+            .card {
+                height: 300px;
+                width: 600px;
+                background-color:black;
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+                border-radius: 20px;
+            }
+        </style>
+  </head>
+    <body>   
+        <div class="row">
+            <div class="card col-8 p-1 mb-3 mx-auto text-center text-white" style="width: max-content;margin-top:70px">
+                <div class="card-body">
+                    <img src="~/img/sittingonchair.svg" width="120"/>
+                    <h3>Oops! You have already booked a seat</h3>
+                    <p>If you want to cancel this seat, use the Cancel button below. </p>
+                    <div class="text-center mt-4">
+                        <a asp-controller="Employee" asp-action="ViewPassSeat" class="btn btn-success btn-lg">View Pass</a>&nbsp;&nbsp;
+                        <a asp-controller="Employee" asp-action="CancelBooking" onclick="deleteFunction()" asp-route-bookingSeatId="@Model.BookingSeatId" class="btn btn-danger btn-lg">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+         function deleteFunction() {
+                let val = confirm("Are you sure you wish to continue?");
+                if (val == false) {
+                    return event.preventDefault();
+                }
+            }
+    </script>
+</html>
 
-    <h1>OOps!!You have already booked seat</h1>
-
-    </center>
 }
 else{
 
@@ -126,7 +157,6 @@ else{
         const thisday = new Date().toISOString().split('T')[0];
         const dateTo = document.getElementById("toDate");
         dateTo.setAttribute("min", thisday);
-
     </script>
 </body>
 </html>
