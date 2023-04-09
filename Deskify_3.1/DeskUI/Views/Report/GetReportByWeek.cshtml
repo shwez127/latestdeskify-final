@@ -1,210 +1,108 @@
-﻿@using DeskEntity.Model;
-@model Tuple<List<Employee>,List<BookingSeat>>;
+﻿@{
+    Layout = "~/Views/Shared/_ReportLayout.cshtml";
+}
 
 
-<head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-    <style>
-        .navbar {
-            display: none;
-        }
-        .footer {
-            display: none;
-        }
-    </style>
-
-</head>
+@using DeskEntity.Model;
+@model Tuple<List<Employee>, List<BookingSeat>>;
 
 <body>
-
+    <div class='html-content'>
+        <br />
     @{
 
-        int booked_and_came = 0;
-
-        int booked_and_notcame = 0;
-
         int Total_Employees = 0;
-
-
-
-        foreach (var item in Model.Item2)
-
-        {
-
-
-
-            if (item.SeatStatus == 1)
-
-            {
-
-                booked_and_came++;
-
-            }
-
-            else
-
-            {
-
-                booked_and_notcame++;
-
-            }
-
-        }
-
-
-
         foreach (var item in Model.Item1)
-
         {
-
             Total_Employees++;
-
+        }
+        @foreach (var item in Model.Item2)
+        {
+            <h3 class="text-center">Booking done by Employees</h3>
+            break;
         }
 
-
-
-
-
-
-        <table>
-
-            <thead>
-
-                @foreach (var item in Model.Item2)
-
-                {
-
-                    <h1>Booking Done By Employees on @item.FromDate.ToShortDateString() </h1>
-
-                    break;
-
-                }
-
-                <tr>&nbsp;</tr>
-
-                <tr>
-
-                    <th>Booking Id</th>
-
-                    <th>Employee Id</th>
-
-                    <th>Employee Name</th>
-                    <th> Dates of Booking</th>
-                    <th> seat Status</th>
-                  
-
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                @foreach (var item in Model.Item2)
-
-                {
-                    <tr>
-
-
-                        <td>@item.BookingSeatId</td>
-
-                        <td>@item.Employee.EmployeeID</td>
-                        <td>@item.Employee.EmployeeName</td>
-                        <td>@item.FromDate.ToShortDateString()</td>
-                        <td>@item.SeatStatus</td>
-                     
-
-
-                    </tr>
-
-                    //                     
-
-
-
-
-                    if (item.SeatStatus == 1)
-
-                    {
-
-                    <td>Booked and Scanned</td>
-
-                    }
-
-
-
-
-
-                }
-
-            </tbody>
-
-        </table>
-
+    <br />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <a class="text-uppercase d-inline-block text-center" style="color:black;font-size:x-large" align="center"> Seat Booked <span class="font-weight-bold" style="font-size:x-large">Details</span></a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="example" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Booking Id</th>
+                            <th>Employee Number</th>
+                            <th>Employee Name</th>
+                            <th>Booking Date</th>
+                            <th>Seat Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Item2)
+                        {
+                            <tr>
+                                <td>@item.BookingSeatId</td>
+                                <td>@item.Employee.EmployeeNumber</td>
+                                <td>@item.Employee.EmployeeName</td>
+                                <td>@item.FromDate.ToShortDateString()</td>
+                                <td>@item.SeatStatus</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     }
 
+     <h4>Total Employees : <span class="font-weight-bold">@Total_Employees</span></h4>
+</div> 
 
+    <div class="col-sm-12">
+            <ul class="pagination justify-content-center export-pagination mt-3 mb-0">
+                <li class="page-item">
+                    <div id="downbtn"></div>
+                <button class="btn btn-outline-dark btn-lg" id="downloadBtn">Download PDF</button>
+                </li>
 
-
-
-    <p class=" font-weight-bolder">Total Employees : @Total_Employees</p>
-
-    <p class=" font-weight-bolder">Booked and Scanned Employees:@booked_and_came</p>
-
-    <p class=" font-weight-bolder">Booked and Not Came Employees:@booked_and_notcame</p>
-
-    <p class=" font-weight-bolder">Not Booked and Not Came:@(Total_Employees - booked_and_notcame-booked_and_came)</p>
-
-    <div id="downbtn">
-
-        <button id="downloadBtn">Download PDF</button>
+            </ul>
     </div>
-
 </body>
 
-<script>
 
+<script>
     const downloadBtn = document.getElementById('downloadBtn');
     const downbtn = document.getElementById('downbtn');
-
     downloadBtn.addEventListener('click', () => {
-
-        generatePDF();
-
+        CreatePDFfromHTML();
     });
-
     downBtn.addEventListener('click', () => {
         delBtn();
     })
+    function CreatePDFfromHTML() {
+        var HTML_Width = $(".html-content").width();
+        var HTML_Height = $(".html-content").height();
+        var top_left_margin = 15;
+        var PDF_Width = HTML_Width + (top_left_margin * 2);
+        var PDF_Height = (PDF_Width * 1.5) + (top_left_margin * 2);
+        var canvas_image_width = HTML_Width;
+        var canvas_image_height = HTML_Height;
 
-    function generatePDF() {
+        var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
 
-        const element = document.body;
-
-        const options = {
-
-            margin: 1,
-
-            filename: 'myPDFFile.pdf',
-
-            image: { type: 'jpeg', quality: 0.98 },
-
-            html2canvas: { scale: 2 },
-
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-
-        };
-
-        document.getElementById('downbtn').innerHTML = null;
-
-        html2pdf().from(element).set(options).save();
-
+        html2canvas($(".html-content")[0]).then(function (canvas) {
+            var imgData = canvas.toDataURL("image/jpeg", 1.0);
+            var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
+            pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+            for (var i = 1; i <= totalPDFPages; i++) {
+                pdf.addPage(PDF_Width, PDF_Height);
+                pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i) + (top_left_margin * 4), canvas_image_width, canvas_image_height);
+            }
+            pdf.save("employee-custom-record.pdf");
+            $(".html-content").hide();
+        });
     }
-
-
 </script>
-
-
-
-
-

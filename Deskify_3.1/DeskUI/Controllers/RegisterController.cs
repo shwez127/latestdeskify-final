@@ -34,10 +34,6 @@ namespace DeskUI.Controllers
                 new SelectListItem{Value="O",Text="Others"},
             };
             ViewBag.genderlist = gender;
-            /* #region Select list before registration
-             TempData["Notification"] = 0;
-             TempData.Keep();
-            */
             return View();
 
         }

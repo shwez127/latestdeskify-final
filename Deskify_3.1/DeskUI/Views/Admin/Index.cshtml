@@ -45,13 +45,13 @@
 
 	#logout_sidebar_button {
 		position: absolute;
-		display: inline-block;
+		margin: 12px;
 		bottom: 0;
+		display: inline-block;
+		width: 91%;
+		text-align: center;
 	}
 
-		#logout_sidebar_button:hover {
-			color: red;
-		}
 
 	.card {
 		width: 300px;
@@ -116,40 +116,36 @@
 	<div>
 		<div id="mySidebar" class="sidebar">
 			<a class="closebtn" onclick="closeNav()"><img width="30px" height="30px" src="~/img/close.png" /></a>
-			<h3 id="stitle" class="text-white " style="font-size: 30px;margin-left: 53px;">
+			<h3 id="stitle" class="text-white" style="font-size: 30px;margin-left: 53px;">
 				Admin
 			</h3>
-			<a asp-controller="Admin" asp-action="ViewRecords">View Records</a>
-			<a asp-controller="Admin" asp-action="AllFloors">Manage Floors</a>
-			<a asp-controller="Admin" asp-action="AllSeats">Manage Seats</a>
-			<a asp-controller="Admin" asp-action="GetAllRooms">Manage Rooms</a>
+			<a asp-controller="Admin" asp-action="ViewRecords" class="text-white" style="font-size: 20px;"><img src="~/img/view.svg" style="height:23px" />&nbsp;&nbsp;View Records</a>
+			<a asp-controller="Admin" asp-action="GetAllBookingSeats" class="text-white" style="font-size: 20px;"><img src="~/img/booked.svg" style="height:23px" />&nbsp;&nbsp;Booked Seats</a>
+			<a asp-controller="Admin" asp-action="AllFloors" class="text-white" style="font-size: 20px;"><img src="~/img/manage.svg" style="height:23px" />&nbsp;&nbsp;Manage Floors</a>
+			<a asp-controller="Admin" asp-action="AllSeats" class="text-white" style="font-size: 20px;"><img src="~/img/manage.svg" style="height:23px" />&nbsp;&nbsp;Manage Seats</a>
+			<a asp-controller="Admin" asp-action="GetAllRooms" class="text-white" style="font-size: 20px;"><img src="~/img/manage.svg" style="height:23px" />&nbsp;&nbsp;Manage Rooms</a>
 
-			<a asp-controller="Home" asp-action="Index" id="logout_sidebar_button" class="nav nav-sidebar" style="font-size: 30px">Log Out</a>
+			<a asp-controller="Home" asp-action="Index" id="logout_sidebar_button" class="btn btn-danger btn-lg text-center">Log Out</a>
 		</div>
 	</div>
 
 	<div class="row row1">
-		<div class="card col-6 col-sm-4 col-md-4 col-lg-4 my-4 mx-auto ">
+		<div class="card col-6 col-sm-4 col-md-4 col-lg-4 my-4 mx-auto">
 			<div class="card-content text-center">
-				<h2 class="ctitle ">Bangalore</h2>
+				<h2 class="ctitle">Bangalore</h2>
 				<h3 class="ctitle"> @DateTime.Now.ToString("dddd, dd MMMM yyyy")</h3>
 			</div>
 		</div>
 	</div>
-	<div class="card col-6 col-sm-4 col-md-4 col-lg-4 mx-auto">
+	<div class="card col-6 col-sm-4 col-md-4 col-lg-4 mx-auto" style="margin-top:60px">
 		<div class="card-content text-center">
-			<h2 class="card-title">Scan QR</h2>
-			<div>
-				<a asp-controller="Admin" asp-action="ScanQR" class="card-button">Scan QR</a>
-			</div>
-			<div id="reader" class="card-title"></div>
-			<div id="result" class="card-title"></div>
+				<a asp-controller="Admin" asp-action="ScanQR" class="btn btn-dark btn-lg">Scan QR</a>
 		</div>
 	</div>
 
 	<div class="card col-6 col-sm-4 col-md-4 col-lg-4 my-4 mx-auto">
-		<div class="card-content">
-			<a asp-controller="Admin" asp-action="AddSeats" class="card-button">Add seat for employee</a>
+		<div class="card-content text-center">
+			<a asp-controller="Admin" asp-action="ViewRecords" class="btn btn-dark btn-lg">View Records</a>
 		</div>
 	</div>
 </body>

@@ -34,7 +34,7 @@ namespace DeskData.Repository
             int[] arr = { -1, 4 };
             List<LoginTable> LoginLists = _db.LoginTables.ToList();
             var TotalList = from v in LoginLists select v;
-            if (loginTable.Email == "Desk@gmail.com" && loginTable.Password == "desk@123")
+            if (loginTable.Email == "admin@deskify.com" && loginTable.Password == "desk@123")
             {
                 arr[1] = 3;
                 return arr;
