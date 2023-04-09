@@ -18,10 +18,16 @@
                             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Booking Details</h3>
                             <div class="card p-3 mb-3">    
                                 <h3>
-                                @{
+                                @if(Model.Employee.Image==null)
+                                {
+                                     <img src="https://www.svgrepo.com/show/57853/avatar.svg" alt="Avatar" width="120" style="float: left; margin-right: 10px;border-radius:50%" />
+                                }
+                                else
+                                
+                                {
                                     string imageBase64Data = Convert.ToBase64String(Model.Employee.Image);
                                     string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
-                                        <img src="@imageDataURL" alt="Avatar" width="120" style="float: left; margin-right: 10px;border-radius:50%" />
+                                    <img src="@imageDataURL" alt="Avatar" width="120" style="float: left; margin-right: 10px;border-radius:50%" />
                                 }
                                 @Model.Employee.EmployeeName<br />
                                 @Model.Employee.EmployeeNumber<br />
