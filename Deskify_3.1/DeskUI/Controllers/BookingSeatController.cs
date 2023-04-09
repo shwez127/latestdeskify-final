@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DeskEntity.Model;
 using Newtonsoft.Json;
+using System;
+using System.Security.Policy;
 
 namespace DeskUI.Controllers
 {
@@ -85,22 +87,25 @@ namespace DeskUI.Controllers
 
                 }
             }
-            return View(seat);
-        }
 
-        [HttpPost]
-        public async Task<IActionResult> DeleteBookingSeat(BookingSeat bookseat)
+            //Update booking
 
-        {
+
+            seat.SeatStatus = 2;
+
+
+
             using (HttpClient client = new HttpClient())
             {
-                string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/DeleteSeatBooking?bookingseatId=" + bookseat.BookingSeatId;
-                using (var response = await client.DeleteAsync(endPoint))
+                StringContent content = new StringContent(JsonConvert.SerializeObject(seat), Encoding.UTF8, "application/json");
+                string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/UpdateSeatBooking";
+                using (var response = await client.PutAsync(endPoint, content))
                 {
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
                         ViewBag.status = "Ok";
-                        ViewBag.message = "BookingSeat details deleted successfully";
+
+
                     }
                     else
                     {
@@ -109,8 +114,80 @@ namespace DeskUI.Controllers
                     }
                 }
             }
-            return View();
+            TempData["SeatStatus"] = seat.SeatStatus;
+            TempData.Keep();
+            TempData["Count"] = Convert.ToInt32(TempData["Count"]) + 1;
+            TempData.Keep();
+
+
+
+            return View(seat);
         }
+
+        //[HttpPost]
+        //public async Task<IActionResult> DeleteBookingSeat(BookingSeat bookseat)
+
+        //{
+
+        //    BookingSeat bookingSeat1=new BookingSeat();
+
+        //    // Updating Booking status
+
+        //    bookingSeat1.SeatStatus = 2;
+
+
+
+
+
+
+        //    using (HttpClient client = new HttpClient())
+        //    {
+        //        StringContent content = new StringContent(JsonConvert.SerializeObject(bookingSeat1), Encoding.UTF8, "application/json");
+        //        string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/UpdateSeatBooking";
+        //        using (var response = await client.PutAsync(endPoint, content))
+        //        {
+        //            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+        //            {
+        //                ViewBag.status = "Ok";
+                       
+
+        //            }
+        //            else
+        //            {
+        //                ViewBag.status = "Error";
+        //                ViewBag.message = "Wrong Entries";
+        //            }
+        //        }
+        //    }
+
+        //    int bookingStatus  = Convert.ToInt32(TempData["SeatStatus"]);
+        //    TempData.Keep();
+
+            
+
+
+        //    using (HttpClient client = new HttpClient())
+        //    {
+        //        string endPoint = _configuration["WebApiBaseUrl"] + "BookingSeat/DeleteSeatBooking?bookingseatId=" + bookseat.BookingSeatId;
+        //        using (var response = await client.DeleteAsync(endPoint))
+        //        {
+        //            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+        //            {
+        //                ViewBag.status = "Ok";
+        //                ViewBag.message = "BookingSeat details deleted successfully";
+        //                TempData["Count"] = Convert.ToInt32(TempData["Count"]) + 1;
+        //                TempData.Keep();
+                        
+        //            }
+        //            else
+        //            {
+        //                ViewBag.status = "Error";
+        //                ViewBag.message = "Wrong Entries";
+        //            }
+        //        }
+        //    }
+        //    return View();
+        //}
 
 
 
@@ -133,6 +210,7 @@ namespace DeskUI.Controllers
             }
             return View(seat);
         }
+
         [HttpPost]
         public async Task<IActionResult> EditBookingSeat(BookingSeat bookseat)
 

@@ -17,10 +17,15 @@ namespace DeskData.Repository
             _db = db;
         }
         #region ADD BookingRoom
-        public void AddBookingRoom(BookingRoom bookingRoom)
+        public int AddBookingRoom(BookingRoom bookingRoom)
         {
             _db.bookingRooms.Add(bookingRoom);
             _db.SaveChanges();
+            List<BookingRoom> list = new List<BookingRoom>();
+            list = _db.bookingRooms.ToList();
+            var booking1 = (from list1 in list
+                            select list1).Last();
+            return booking1.BookingRoomId;
         }
         #endregion         
 
@@ -34,7 +39,15 @@ namespace DeskData.Repository
         #region Get BookingRoomById
         public BookingRoom GetBookingRoomById(int bookingRoomId)
         {
-            return _db.bookingRooms.Find(bookingRoomId);
+            var result = _db.bookingRooms.Include(obj => obj.Employee).Include(obj => obj.Room).ToList();
+            foreach (var bookingRoom in result)
+            {
+                if (bookingRoomId == bookingRoom.BookingRoomId)
+                {
+                    return bookingRoom;
+                }
+            }
+            return null;
         }
         #endregion
 

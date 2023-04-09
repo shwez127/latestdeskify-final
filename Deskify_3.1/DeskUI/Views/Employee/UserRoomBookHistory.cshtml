@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewData["Title"] = "UserRoomBookHistory";
+}
+
+<h1>UserRoomBookHistory</h1>
+
+@{
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+@model DeskEntity.Model.BookingRoom
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width-device-width" />
+    </head>
+    <body style="background-color:#F0F8FF">
+
+        <br />
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <a class="text-uppercase d-inline-block text-center" style="color:#003399;font-size:x-large" align="center"> Room Booked <span class="font-weight-bold" style="font-size:x-large">Details</span></a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="example" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>BookingRoom Id</th>
+                                <th>Employee Name</th>
+                                <th>Employee Phone</th>
+                                <th>Employee Role</th>
+                                <th>FromDate</th>
+                                <th>ToDate</th>
+                                <th>Room Number</th>
+                                <th>Room Status</th>
+                                <th>Employee Number</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                          
+                                    <tr>
+                                        <td>@Model.BookingRoomId</td>
+                                        <td>@Model.Employee.EmployeeName</td>
+                                        <td>@Model.Employee.PhoneNumber</td>
+                                        <td>@Model.Employee.Role</td>
+                                        <td>@Model.FromDate.ToShortDateString()</td>
+                                        <td>@Model.ToDate.ToShortDateString()</td>
+                                        <td>@Model.Room.RoomNumber</td>
+                                        @if (Model.RoomStatus == 1)
+                                        {
+                                            <td>Approved</td>
+                                        }
+                                        else if (Model.RoomStatus == 0)
+                                        {
+                                            <td>Rejected</td>
+                                        }
+                                        else if (Model.RoomStatus == 2)
+                                        {
+                                            <td>Pending</td>
+                                        }
+                                        
+
+                                        <td>@Model.Employee.EmployeeNumber</td>
+                                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
