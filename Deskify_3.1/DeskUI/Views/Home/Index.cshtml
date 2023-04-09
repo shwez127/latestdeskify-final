@@ -1,0 +1,134 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<html>
+<head>
+    <link href="~/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!-- Move to up button -->
+    <div class="scroll-button">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <!-- Home Section Start -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text">
+                <div class="text-one font-weight-bolder">THE WORLD'S LEADING DESK SCHEDULING PLATFORM</div>
+                <div class="text-two">Easy desk booking solution for the flexible workspace</div>
+                <div class="text-four font-weight-bold">Deskify is the solution that gives your workplace the flexibility it needs.</div>
+            </div>
+            <div class="button">
+
+                <a asp-controller="LoginTable" asp-action="Index"><button>LOG IN</button></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section Start -->
+    <section class="about" id="about">
+        <div class="content">
+            <div class="title"><span>How it works</span></div>
+            <div class="about-details">
+                <div class="left">
+                    @*<img src="about2.png" alt="">*@
+                    <iframe width="420" height="315"
+                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                </div>
+                <div class="right">
+                    <div class="topic font-weight-bold" style="font-size:xx-large">The power and flexibility your organization needs</div>
+                    <div>
+                        <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:20px">
+                            Deskify brings together everything that’s required to handle the scheduling of shared desk space - including interactive floorplans and maps. Take advantage of Skedda's clever scheduling features and save everyone time.                        
+                        </p>
+                        <div style="margin-left:20px">
+                                <ol style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:20px">
+                                    <li>Coffee</li>
+                                    <li>Tea</li>
+                                    <li>Milk</li>
+                                </ol>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="ID.jpg" download="Id"><button>Demo</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   @* <!-- My Services Section Start -->
+    <section class="services" id="services">
+        <div class="content">
+            <div class="title"><span>My Services</span></div>
+            <div class="boxes">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <a href="https://licindia.in/Customer-Services/Claims-settlement-requirements"><div class="topic">Maturity Payment</div></a>
+                    <p>The settlement of claims is a very important aspect of service to the policyholders. Hence, the Corporation has laid great emphasis on expeditious settlement of Maturity as well as Death Claims.</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-umbrella"></i>
+                    </div>
+                    <a href="https://licindia.in/Products/Withdrawn-Plans/New-Bima-Gold/benefit"><div class="topic">Survival Benefit Payout</div></a>
+                    <p>Survival benefit is the amount a policyholder receives at the end of a policy term. In case, you survive till the end of your policy and the policy is active, it will take care of your financial needs by offering survival benefits.</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-balance-scale-right"></i>
+                    </div>
+                    <a href="https://licindia.in/Home/Policy-Loan-Options"><div class="topic">Loan On Policy</div></a>
+                    <p>LIC loan is available after the plan completes a specified tenure. This tenure can be one to three years depending on the mode of premium payment. Moreover, the full premiums should be paid during this tenure.</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-credit-card"></i>
+                    </div>
+                    <a href="https://www.licindia.in/Home-(1)/Online-Payment"><div class="topic">Premium Payment</div></a>
+                    <p>Premium paying term is the total number of years for the policy holder to pay the premium.</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class=" fas fa-file-contract"></i>
+                    </div>
+                    <a href="https://licindia.in/Customer-Services/Policy-Guidelines-Helpline#14"><div class="topic">Revival Of Lapsed Policy</div></a>
+                    <p>If your policy has lapsed due to non-payment of premiums within the due date, the terms and conditions of the policy contract are rendered void, till you revive your policy.</p>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <a href="https://licindia.in/Products/Pension-Plans"><div class="topic">Pension Plan</div></a>
+                    <p>LIC Pension plan provides a steady flow of income to the individual in their golden years of retirement.</p>
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+    <!-- Contact Me section Start -->
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="title"><span>Contact Me</span></div>
+            <div class="text">
+                <div class="topic">Any Query?</div>
+                <p>Address : 
+                <p>Phone : +91 </p>
+                <p>Email : </p>
+                <div class="button">
+                    <a href="https://wa.me/918084842455"><button>Let's Chat</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿using DeskData.Data;
+using DeskEntity.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace DeskData.Repository
+{
+    public class SeatRepository:ISeatRepository
+    {
+        DeskDbContext _db;
+        public SeatRepository(DeskDbContext db)
+        {
+            _db = db;
+        }
+
+        #region AddSeat
+        public void AddSeat(Seat seat)
+        {
+            _db.seats.Add(seat);
+            _db.SaveChanges();
+        }
+        #endregion AddSeat
+
+        #region DeleteSeat
+        public void DeleteSeat(int seatId)
+        {
+            var seats = _db.seats.Find(seatId);
+            _db.seats.Remove(seats);
+            _db.SaveChanges();
+
+        }
+        #endregion DeleteSeat
+
+        #region  UpdateSeat
+        public void UpdateSeat(Seat seat)
+        {
+            _db.Entry(seat).State = EntityState.Modified;
+            _db.SaveChanges();
+
+        }
+        #endregion UpdateSeat
+
+        #region GetSeatsById 
+        public Seat GetSeatsById(int seatId)
+        {
+            var result= _db.seats.Include(obj => obj.Floor).ToList();
+            return _db.seats.Find(seatId);
+        }
+        #endregion GetSeatsById
+
+        #region GetAllSeats
+        public IEnumerable<Seat> GetAllSeats()
+        {
+            return _db.seats.Include(obj => obj.Floor).ToList();
+        }
+
+        #endregion GetAllSeats
+        public IEnumerable<Seat> GetSeatsByFloorId(int floorId)
+        {
+            List<Seat> seats = _db.seats.Include(obj => obj.Floor).ToList();
+
+            List<Seat>seats1 = new List<Seat>();
+
+            foreach (var item in seats)
+            {
+                if(item.FloorId == floorId)
+                { seats1.Add(item); }
+            }
+            return seats1;  
+        }
+
+       
+    }
+}

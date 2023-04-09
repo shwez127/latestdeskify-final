@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+@model DeskEntity.Model.BookingRoom
+
+<html>
+<body style="background:-webkit-linear-gradient(left, #fff, #000)">
+    <section class="vh-70 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Success</h3>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card col-8 p-1 mb-3 mx-auto" style="width: max-content;width: 100%;background-color: #fff;box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;border-radius: 20px;overflow: hidden;">
+                                        <div class="card-body">
+                                            <h6><img src="~/img/calender.png" alt="" width="20px">&nbsp;&nbsp;From Date : @Model.FromDate.ToShortDateString()</h6>
+                                            <h6><img src="~/img/calender.png" alt="" width="20px">&nbsp;&nbsp;To Date : @Model.ToDate.ToShortDateString()</h6>
+                                            <h6><img src="~/img/clock.png" alt="" width="20px">&nbsp;&nbsp;Meeting Duration : @Model.MeetingHours</h6>
+                                            <h6><img src="~/img/room.svg" alt="" width="20px">&nbsp;&nbsp;Booked Room : @Model.Room.RoomNumber</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card col-8 p-1 mb-3 mx-auto" style="width: 100%;background-color: #fff;box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;border-radius: 20px;overflow: hidden;">
+                                        <div class="card-body">
+                                            <h6><img src="~/img/location.png" alt="" width="20px">&nbsp;&nbsp;Branch Name : BANGALORE</h6>
+                                            <h6><img src="~/img/building.png" alt="" width="20px">&nbsp;&nbsp;Building Name : Jp Nagar</h6>
+                                        </div>
+                                    </div>
+                                    <div class="text-center" style="margin-top:55px">
+
+                                        <button class="btn btn-dark btn-lg justify-content-center" onclick="success()">Done</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script>
+        function success() {
+            Swal.fire({
+                title: "Success!",
+                text: "Your meeting room is booked successfully",
+                type: "success"
+            }).then(function () {
+                window.location = "http://localhost:32138/Employee";
+            });
+        }
+    </script>
+</body>
+</html>

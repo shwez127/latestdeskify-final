@@ -1,0 +1,159 @@
+﻿@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+	ViewData["Title"] = "Dashboard";
+}
+
+
+<style>
+	.bnav,
+	.bnav:after,
+	.bnav:before {
+		background: #ffffff;
+		border-radius: 1px;
+		content: "";
+		cursor: pointer;
+		display: block;
+		height: 3px;
+		transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+		width: 24px;
+	}
+
+	.bnav {
+		position: relative;
+	}
+
+		.bnav:before {
+			position: absolute;
+			top: -7.5px;
+			width: 24px;
+		}
+
+		.bnav:after {
+			bottom: -7.5px;
+			position: absolute;
+			width: 16px;
+		}
+
+	.bnav-right,
+	.bnav-right:after,
+	.bnav-right:before {
+		right: 0;
+	}
+
+	#logout_sidebar_button {
+		position: absolute;
+		display: inline-block;
+		bottom: 0;
+	}
+
+		#logout_sidebar_button:hover {
+			color: red;
+		}
+
+	.card {
+		width: 300px;
+		/*height: 200px;*/
+		background-color: #fff;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+		.card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+	.card-content {
+		padding: 20px;
+	}
+
+	.card-title {
+		
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.card-description {
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 5px;
+	}
+
+	.card-button {
+		
+		display: block;
+		width: 100%;
+		padding: 10px;
+		background-color: #000;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 5px;
+	}
+
+		.card-button:hover {
+			background-color: #615f5f;
+			color: #fff;
+		}
+
+	.card-btn {
+		font-family: 'Roboto','sans-serif';
+		background-color: #ffffff00;
+		font-size: 24px;
+		color: #fff;
+		text-decoration: none;
+	}
+
+</style>
+
+<body style="background: -webkit-linear-gradient(left, #fff, #000);">
+	<div>
+		<div id="mySidebar" class="sidebar">
+			<a class="closebtn" onclick="closeNav()"><img width="30px" height="30px" src="~/img/close.png" /></a>
+			<h3 id="stitle" class="text-white " style="font-size: 30px;margin-left: 53px;">
+				Admin
+			</h3>
+			<a asp-controller="Admin" asp-action="ViewRecords">View Records</a>
+			<a asp-controller="Admin" asp-action="AllFloors">Manage Floors</a>
+			<a asp-controller="Admin" asp-action="AllSeats">Manage Seats</a>
+			<a asp-controller="Admin" asp-action="GetAllRooms">Manage Rooms</a>
+
+			<a asp-controller="Home" asp-action="Index" id="logout_sidebar_button" class="nav nav-sidebar" style="font-size: 30px">Log Out</a>
+		</div>
+	</div>
+
+	<div class="row row1">
+		<div class="card col-6 col-sm-4 col-md-4 col-lg-4 my-4 mx-auto ">
+			<div class="card-content text-center">
+				<h2 class="ctitle ">Bangalore</h2>
+				<h3 class="ctitle"> @DateTime.Now.ToString("dddd, dd MMMM yyyy")</h3>
+			</div>
+		</div>
+	</div>
+	<div class="card col-6 col-sm-4 col-md-4 col-lg-4 mx-auto">
+		<div class="card-content text-center">
+			<h2 class="card-title">Scan QR</h2>
+			<div>
+				<a asp-controller="Admin" asp-action="ScanQR" class="card-button">Scan QR</a>
+			</div>
+			<div id="reader" class="card-title"></div>
+			<div id="result" class="card-title"></div>
+		</div>
+	</div>
+
+	<div class="card col-6 col-sm-4 col-md-4 col-lg-4 my-4 mx-auto">
+		<div class="card-content">
+			<a asp-controller="Admin" asp-action="AddSeats" class="card-button">Add seat for employee</a>
+		</div>
+	</div>
+</body>
+
+
+
+

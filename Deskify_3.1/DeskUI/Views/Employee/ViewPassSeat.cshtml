@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+@model DeskEntity.Model.BookingSeat
+
+<br />
+<a asp-area="" asp-controller="Employee" asp-action="Index"><img class="img-fluid" style="height:35px" src="https://www.svgrepo.com/show/358729/navigate-back-circle.svg"></a>
+@if(Model.SeatStatus==1){
+<html>
+<body style="background:-webkit-linear-gradient(left, #fff, #000)">
+    <section class="vh-70 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Booking Details</h3>
+                            <div class="card p-3 mb-3">    
+                                <h3>
+                                @{
+                                    string imageBase64Data = Convert.ToBase64String(Model.Employee.Image);
+                                    string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+                                        <img src="@imageDataURL" alt="Avatar" width="120" style="float: left; margin-right: 10px;border-radius:50%" />
+                                }
+                                @Model.Employee.EmployeeName<br />
+                                @Model.Employee.EmployeeNumber<br />
+                                    <span class="text-center" style="border-radius: 20px; padding:0px 40px 5px 10px; font-size: 16px;background-color: silver;">@Model.Employee.Role</span>
+                                </h3>
+
+                            </div>
+                            <div class="card p-3 mb-3">
+
+                                <h6><img src="~/img/calender.png" alt="" width="20px">&nbsp;&nbsp;From Date : @Model.FromDate.ToShortDateString()</h6>
+                                <h6><img src="~/img/calender.png" alt="" width="20px">&nbsp;&nbsp;To Date : @Model.ToDate.ToShortDateString()</h6>
+                                <h6><img src="~/img/clock.png" alt="" width="20px">&nbsp;&nbsp;Shift Time : @Model.SeatShiftTime</h6>
+                                <h6><img src="~/img/chair.png" alt="" width="20px">&nbsp;&nbsp;Booked Seat Number : @Model.Seat.SeatNumber</h6>
+                                <h6><img src="~/img/chair.png" alt="" width="20px">&nbsp;&nbsp;Booking ID : @Model.BookingSeatId</h6>
+                            </div>
+                            <div class="card p-3 mb-3">
+                                <h6><img src="~/img/building.png" alt="" width="20px">&nbsp;&nbsp;Floor : @Model.Seat.Floor.FloorName</h6>
+                                <h6><img src="~/img/location.png" alt="" width="20px">&nbsp;&nbsp;Branch Name : Bangalore</h6>
+                                <h6><img src="~/img/building.png" alt="" width="20px">&nbsp;&nbsp;Building Name : JP Nagar</h6>
+                            </div>
+                            <div class="card p-3 mb-3">
+                                <a class="btn btn-dark btn-lg me-3 mt-3" asp-controller="Employee" asp-action="GenerateQR" style="font-size:x-large">QR Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+}
+else
+{
+    <html>
+    <head>
+        <style>
+            .card {
+                height: 300px;
+                width: 600px;
+                background-color: black;
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="card col-8 p-1 mb-3 mx-auto text-center text-white" style="width: max-content;margin-top:70px">
+                <div class="card-body">
+                    <img src="~/img/empty-chair.webp" width="140" />
+                    <h3>No bookings for the day</h3>
+                    <p>If you want to book a seat, use the Book a Seat button below.</p>
+                    <div class="text-center">
+                        <a asp-controller="Employee" asp-action="BookingSeat" class="btn btn-success btn-lg">Book a Seat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+}
