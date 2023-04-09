@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "NotFound";
+}
+
+@model Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary
+
+
+<html>
+<head>
+    <style>
+        .card {
+            height: 300px;
+            width: 600px;
+            background-color: black;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<br />
+<a asp-area="" asp-controller="Admin" asp-action="ViewRecords"><img class="img-fluid" style="height:35px" src="https://www.svgrepo.com/show/358729/navigate-back-circle.svg"></a>
+<body>
+    <div class="row">
+        <div class="card col-8 p-1 mb-3 mx-auto text-center text-white" style="width: max-content;margin-top:80px">
+            <div class="card-body">
+                <img src="https://www.svgrepo.com/show/256738/folder-warning.svg" width="110" />
+                <br />
+                <br />
+                <h3>Oops! Employee Not Found</h3>
+                <p>The employee you searched for could not be found.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

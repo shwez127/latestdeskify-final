@@ -46,69 +46,11 @@
 
 	#logout_sidebar_button {
 		position: absolute;
-		display: inline-block;
+		margin: 12px;
 		bottom: 0;
-	}
-
-		#logout_sidebar_button:hover {
-			color: red;
-		}
-
-	.card {
-		width: 300px;
-		/*height: 200px;*/
-		background-color: #fff;
-		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-		border-radius: 5px;
-		overflow: hidden;
-	}
-
-		.card img {
-			width: 100%;
-			height: 200px;
-			object-fit: cover;
-		}
-
-	.card-content {
-		padding: 20px;
-	}
-
-	.card-title {
-		
-		font-size: 16px;
-		font-weight: bold;
-		margin-bottom: 10px;
-	}
-
-	.card-description {
-		font-size: 16px;
-		line-height: 1.5;
-		margin-bottom: 5px;
-	}
-
-	.card-button {
-		
-		display: block;
-		width: 100%;
-		padding: 10px;
-		background-color: #000;
-		color: #fff;
+		display: inline-block;
+		width: 91%;
 		text-align: center;
-		text-decoration: none;
-		border-radius: 5px;
-	}
-
-		.card-button:hover {
-			background-color: #615f5f;
-			color: #fff;
-		}
-
-	.card-btn {
-		font-family: 'Roboto','sans-serif';
-		background-color: #ffffff00;
-		font-size: 24px;
-		color: #fff;
-		text-decoration: none;
 	}
 
 </style>
@@ -121,11 +63,13 @@
 			<h3 id="stitle" class="text-white " style="font-size: 30px;margin-left: 53px;">
 				Admin
 			</h3>
-			<a asp-controller="Admin" asp-action="Index">Dashboard</a>
-
-			<a asp-controller="Home" asp-action="Index" id="logout_sidebar_button" class="nav nav-sidebar" >Log Out</a>
+			<a asp-controller="Admin" asp-action="Index" class="text-white" style="font-size: 20px;"><img src="~/img/dashboard.svg" style="height:23px" />&nbsp;&nbsp;Dashboard</a>
+			<a asp-controller="Home" asp-action="Index" id="logout_sidebar_button" class="btn btn-danger btn-lg text-center">Log Out</a>
 		</div>
 	</div>
+
+	<br />
+	<a asp-area="" asp-controller="Admin" asp-action="AllSeats"><img class="img-fluid" style="height:35px" src="https://www.svgrepo.com/show/358729/navigate-back-circle.svg"></a>
 
 
 	<section class="vh-70 gradient-custom">
@@ -134,18 +78,10 @@
 				<div class="col-12 col-lg-9 col-xl-7">
 					<div class="card shadow-2-strong card-registration mx-auto" style="border-radius: 15px;">
 						<div class="card-body ">
-							<h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Add a Seat</h3>
+							<h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Add Seat</h3>
 							<form method="post" enctype="multipart/form-data">
 
 								<div class="row">
-									<div class="col-md-6 mb-4">
-
-										<div class="form-outline">
-											<label class="form-label">Seat Id</label>
-											<input type="text" asp-for="SeatId" class="form-control form-control-lg" placeholder="Seat Id" disabled />
-										</div>
-
-									</div>
 									<div class="col-md-6 mb-4">
 
 										<div class="form-outline">
@@ -155,14 +91,13 @@
 
 									</div>
 									<div class="col-md-6 mb-4">
-
 										<div class="form-outline">
-											<label class="form-label">Floor Id</label>
-											<input type="text" asp-for="FloorId" class="form-control form-control-lg" placeholder="Floor Id" />
-										</div>
+											<label class="form-label">Floor Name</label>
+											<input type="text" asp-for="Floor.FloorName" class="form-control form-control-lg" placeholder="Floor Name" />
+										</div>									
 
 									</div>
-									<div class="col-md-6 mb-4">
+									<div class="col-md-12 mb-4">
 
 										<div class="form-outline w-100">
 											<label class="form-label">Status</label>
@@ -200,18 +135,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="text-center">
-				<a asp-controller="Admin" asp-action="AllSeats" class="btn btn-secondary mt-4">Return to All Seats</a>
-			</div>
 		</div>
 	</section>
 	<script>
 		function addFunction() {
-			let val = confirm("Are you sure you want to add a new Seat?");
+			let val = confirm("Are you sure you want to add a new seat?");
 			if (val == false) {
 				return event.preventDefault();
 			}
-			alert("Your Seat is Added!");
+			alert("Seat is added successfully!");
 		}
 	</script>
 </body>

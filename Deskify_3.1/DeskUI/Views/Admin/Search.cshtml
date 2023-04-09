@@ -1,0 +1,111 @@
+﻿@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@model IEnumerable<DeskEntity.Model.BookingSeat>
+
+<style>
+	.bnav,
+	.bnav:after,
+	.bnav:before {
+		background: #ffffff;
+		border-radius: 1px;
+		content: "";
+		cursor: pointer;
+		display: block;
+		height: 3px;
+		transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+		width: 24px;
+	}
+
+	.bnav {
+		position: relative;
+	}
+
+		.bnav:before {
+			position: absolute;
+			top: -7.5px;
+			width: 24px;
+		}
+
+		.bnav:after {
+			bottom: -7.5px;
+			position: absolute;
+			width: 16px;
+		}
+
+	.bnav-right,
+	.bnav-right:after,
+	.bnav-right:before {
+		right: 0;
+	}
+
+	#logout_sidebar_button {
+		position: absolute;
+		margin: 12px;
+		bottom: 0;
+		display: inline-block;
+		width: 91%;
+		text-align: center;
+	}
+	
+</style>
+
+
+	<div>
+		<div id="mySidebar" class="sidebar">
+			<a class="closebtn" onclick="closeNav()"><img width="30px" height="30px" src="~/img/close.png" /></a>
+			<h3 id="stitle" class="text-white " style="font-size: 30px;margin-left: 53px;">
+				Admin
+			</h3>
+			<a asp-controller="Admin" asp-action="Index" class="text-white" style="font-size: 20px;"><img src="~/img/dashboard.svg" style="height:23px" />&nbsp;&nbsp;Dashboard</a>
+			<a asp-controller="Home" asp-action="Index" id="logout_sidebar_button" class="btn btn-danger btn-lg text-center">Log Out</a>
+		</div>
+	</div>
+
+<br />
+<a asp-area="" asp-controller="Admin" asp-action="ViewRecords"><img class="img-fluid" style="height:35px" src="https://www.svgrepo.com/show/358729/navigate-back-circle.svg"></a>
+<br />
+<br />
+<br />
+<body style="background: -webkit-linear-gradient(left, #fff, #000);">
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<a class="text-uppercase d-inline-block text-center" style="color:black;font-size:x-large" align="center"> Booking <span class="font-weight-bold" style="font-size:x-large">Details</span></a>
+
+		</div>
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
+					<thead>
+						<tr>
+							<th>Booking Seat Id</th>
+							<th>Employee Name</th>
+							<th>Employee Number</th>
+							<th>From Date</th>
+							<th>To Date</th>
+							<th>Shift Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var seat in Model)
+						{
+							<tr>
+								<td>@seat.BookingSeatId</td>
+								<td>@seat.Employee.EmployeeName </td>
+								<td>@seat.Employee.EmployeeNumber</td>
+								<td>@seat.FromDate.ToShortDateString()</td>
+								<td>@seat.ToDate.ToShortDateString()</td>
+								<td>@seat.SeatShiftTime.ToString()</td>
+
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+
+

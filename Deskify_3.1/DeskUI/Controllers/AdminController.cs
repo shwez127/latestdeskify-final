@@ -30,6 +30,7 @@ namespace DeskUI.Controllers
         {
             return View();
         }
+
         [HttpGet]
         public async Task<IActionResult> AllSeats()
         {
@@ -69,6 +70,7 @@ namespace DeskUI.Controllers
                     {
                         ViewBag.status = "Ok";
                         ViewBag.message = "Seat Booked!!";
+                        return RedirectToAction("AllSeats", "Admin");
                     }
                     else
                     {
@@ -82,47 +84,52 @@ namespace DeskUI.Controllers
 
         public async Task<IActionResult> DeleteSeats(int SeatId)
         {
-            Seat seat = new Seat();
             using (HttpClient client = new HttpClient())
             {
-                string endPoint = _configuration["WebApiBaseUrl"] + "Seat/GetSeatsById?seatId=" + SeatId;
-
-                using (var response = await client.GetAsync(endPoint))
-                {
-                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                    {
-                        var result = await response.Content.ReadAsStringAsync();
-                        seat = JsonConvert.DeserializeObject<Seat>(result);
-                    }
-
-                }
-            }
-            return View(seat);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> DeleteSeats(Seat seat)
-
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                string endPoint = _configuration["WebApiBaseUrl"] + "Seat/DeleteSeat?seatId=" + seat.SeatId;
+                string endPoint = _configuration["WebApiBaseUrl"] + "Seat/DeleteSeat?seatId=" + SeatId;
                 using (var response = await client.DeleteAsync(endPoint))
                 {
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
-                        ViewBag.status = "Ok";
-                        ViewBag.message = "Seat details deleted successfully";
-                    }
-                    else
-                    {
-                        ViewBag.status = "Error";
-                        ViewBag.message = "Wrong Entries";
-                    }
-                }
+						ViewBag.status = "Ok";
+						ViewBag.message = "Seat details deleted successfully";
+						return RedirectToAction("AllSeats", "Admin");
+					}
+					else
+					{
+						ViewBag.status = "Error";
+						ViewBag.message = "Wrong Entries";
+					}
+
+				}
             }
             return View();
         }
+
+        //[HttpPost]
+        //public async Task<IActionResult> DeleteSeats(Seat seat)
+
+        //{
+        //    using (HttpClient client = new HttpClient())
+        //    {
+        //        string endPoint = _configuration["WebApiBaseUrl"] + "Seat/DeleteSeat?seatId=" + seat.SeatId;
+        //        using (var response = await client.DeleteAsync(endPoint))
+        //        {
+        //            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+        //            {
+        //                ViewBag.status = "Ok";
+        //                ViewBag.message = "Seat details deleted successfully";
+        //                return RedirectToAction("AllSeats", "Admin");
+        //            }
+        //            else
+        //            {
+        //                ViewBag.status = "Error";
+        //                ViewBag.message = "Wrong Entries";
+        //            }
+        //        }
+        //    }
+        //    return View();
+        //}
 
 
         [HttpGet]
@@ -164,6 +171,7 @@ namespace DeskUI.Controllers
                     {
                         ViewBag.status = "Ok";
                         ViewBag.message = "Seat Updated!!";
+                        return RedirectToAction("AllSeats", "Admin");
                     }
                     else
                     {
@@ -218,6 +226,7 @@ namespace DeskUI.Controllers
                     {
                         ViewBag.status = "Ok";
                         ViewBag.message = "Floor details saved sucessfully!!";
+                        return RedirectToAction("AllFloors", "Admin");
                     }
                     else
                     {
@@ -261,6 +270,7 @@ namespace DeskUI.Controllers
                     {
                         ViewBag.status = "Ok";
                         ViewBag.message = "Floor details updated sucessfully!!";
+                        return RedirectToAction("AllFloors", "Admin");
                     }
                     else
                     {
@@ -271,11 +281,7 @@ namespace DeskUI.Controllers
             }
             return View();
         }
-        public IActionResult DeleteFloors()
-        {
-            return View();
-        }
-        [HttpPost]
+
         public async Task<IActionResult> DeleteFloors(int floorID)
         {
             using (HttpClient client = new HttpClient())
@@ -343,7 +349,7 @@ namespace DeskUI.Controllers
                     {
                         ViewBag.status = "Ok";
                         ViewBag.message = "Room Details Added Successfully!";
-                        //return RedirectToAction("Index", "Room");
+                        return RedirectToAction("GetAllRooms", "Admin");
                     }
                     else
                     {
@@ -360,7 +366,7 @@ namespace DeskUI.Controllers
         {
             if (roomId != 0)
             {
-                //We are Storing Doctor Id  temporary to avoid the error. Now it will show the room details after the update also
+                //We are Storing Id  temporary to avoid the error. Now it will show the room details after the update also
                 TempData["UpdateroomId"] = roomId;
                 TempData.Keep();
             }
@@ -400,6 +406,7 @@ namespace DeskUI.Controllers
                     {
                         ViewBag.status = "Ok";
                         ViewBag.message = "Room Details Updated Successfully!";
+                        return RedirectToAction("GetAllRooms", "Admin");
                     }
                     else
                     {
@@ -424,7 +431,8 @@ namespace DeskUI.Controllers
                     {
                         ViewBag.status = "Ok";
                         ViewBag.message = "Room Details Deleted Successfully!";
-                    }
+						return RedirectToAction("GetAllRooms", "Admin");
+					}
                     else
                     {
                         ViewBag.status = "Error";
@@ -702,16 +710,15 @@ namespace DeskUI.Controllers
             ViewBag.shiftTimings = ShiftTiming();
             return View(bookingseatresult);
         }
-        #endregion
+		#endregion
+		
 
-        #region Search
+		#region Search
 
-        public IActionResult Search()
+		public IActionResult Search()
         {
             return View();
         }
-
-
 
         [HttpPost]
         public IActionResult Search(int Employeenumber)
@@ -720,7 +727,7 @@ namespace DeskUI.Controllers
             if (employee == null)
             {
                 ModelState.AddModelError(string.Empty, "Employee not found.");
-                return View("\\Views\\Shared\\NotFound.cshtml", ModelState);
+                return View("\\Views\\Admin\\NotFound.cshtml", ModelState);
             }
             var bookings = db.bookingSeats.Include(b => b.Employee).Where(b => b.Employee.EmployeeNumber == Employeenumber).ToList();
 
@@ -731,13 +738,9 @@ namespace DeskUI.Controllers
                 var employeeNames = bookings.Select(b => b.Employee.EmployeeName).Distinct().ToList();
                 var EmployeeNumber = bookings.Select(b => b.Employee.EmployeeNumber).Distinct().ToList();
 
-
-
                 ViewBag.EmployeeNames = employeeNames;
-                return View("Details", bookings);
+                return View("Search", bookings);
             }
-
-
 
             return View("NotFound");
 
@@ -745,7 +748,10 @@ namespace DeskUI.Controllers
         }
 
         #endregion
-
+        public IActionResult NotFound()
+        {
+            return View();
+        }
         public IActionResult ScanQR()
         {
             return View();
